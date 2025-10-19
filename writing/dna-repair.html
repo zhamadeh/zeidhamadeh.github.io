@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Repair - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            padding: 140px 0 100px;
+        }
+
+        .article-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            article {
+                padding: 120px 0 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Molecular Biology</div>
+            <h1>New Ways of Thinking About Cancer</h1>
+            <p class="article-subtitle">How DNA repair shapes cancer development</p>
+
+            <div class="article-content">
+                <p>Cancer is, at its core, a <strong>disease of the genome</strong>. Our DNA is under constant attack—by internal stressors like reactive molecules in cells and external sources such as radiation or chemicals. Normally, repair systems step in to fix the damage and preserve genetic integrity. But when repair fails, errors accumulate. If those errors disrupt the genes that control cell growth, cells can begin dividing uncontrollably.</p>
+
+                <p>This <strong>genomic instability</strong>—the build-up of mutations and structural changes in DNA—is one of the defining hallmarks of cancer. Almost all cancers show some form of instability, but the <strong>amount and type</strong> differ widely across tumor types. And the sources are diverse: errors can arise during <strong>replication, transcription, repair, or recombination</strong>.</p>
+
+                <p>Over the last two decades, researchers have increasingly recognized that cancer cells don't just suffer from DNA repair defects—they actively exploit them. By suppressing repair mechanisms, tumors both <strong>initiate disease</strong> and <strong>sustain uncontrolled growth</strong>.</p>
+
+                <h2>My research: DNA helicases and repair</h2>
+
+                <p>My work focuses on <strong>DNA helicases</strong>, enzymes that unwind DNA and help prevent mutations. Within this group, the <strong>RecQ helicases</strong> stand out: they are linked to rare accelerated aging syndromes that also carry a high risk of cancer.</p>
+
+                <p>One member of this family, <strong>RECQL5</strong>, has remained relatively unexplored. To investigate its role, I turned to <strong>Strand-seq</strong>, a powerful single-cell sequencing technique that tracks DNA replication patterns at unprecedented resolution.</p>
+
+                <p>Using both new <strong>wet-lab protocols</strong> and <strong>bioinformatic tools</strong>, I mapped fragile genomic regions prone to replication stress. What I found was striking: <strong>specific "troublesome" DNA regions require RecQ helicases for faithful replication</strong>. Without them, cells are more likely to accumulate errors—errors that may fuel cancer.</p>
+
+                <h2>Why this matters</h2>
+
+                <p>Studying DNA repair at single-cell resolution opens a new window into cancer biology. It highlights not only where the genome is most vulnerable, but also how specific repair pathways protect against instability. By understanding these weak spots, we move closer to:</p>
+
+                <ul>
+                    <li>Explaining how different cancers arise</li>
+                    <li>Designing therapies that exploit tumor-specific repair defects</li>
+                    <li>Developing strategies to preserve genome integrity in healthy cells</li>
+                </ul>
+            </div>
+
+            <a href="../index.html#writing" class="back-link">← Back to Writing</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>

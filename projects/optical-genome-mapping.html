@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optical Genome Mapping - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            padding: 140px 0 100px;
+        }
+
+        .article-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            article {
+                padding: 120px 0 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Clinical Project · Current</div>
+            <h1>Optical Genome Mapping at VGH</h1>
+            <p class="article-subtitle">From Validation to Clinical Impact</p>
+
+            <div class="article-content">
+                <h3>Overview</h3>
+                <p>At Vancouver General Hospital's Cytogenomics Laboratory, I've helped drive the <strong>validation, implementation, and dissemination</strong> of <strong>Optical Genome Mapping (OGM)</strong> as a frontline diagnostic for hematologic malignancies, including acute leukemias. This work spans clinical validation studies, platform comparisons, and integration with long-read sequencing, alongside broad conference dissemination and a forthcoming peer-reviewed manuscript.</p>
+
+                <h3>Clinical validation & implementation</h3>
+                <ul>
+                    <li>Led and contributed to the <strong>clinical validation</strong> of OGM as a <strong>front-line diagnostic test</strong> for hematological neoplasms.</li>
+                    <li>Advanced <strong>platform benchmarking</strong> (Stratys vs. Saphyr) to inform real-world deployment and workflow decisions.</li>
+                </ul>
+
+                <h3>Publications</h3>
+                <ul>
+                    <li><strong>Clinical Validation of Optical Genome Mapping as a Front-Line Diagnostic Test for Hematological Neoplasms</strong> — manuscript pending publication.</li>
+                    <li>Additional genomics work includes methods and applications papers that underpin expertise in structural variation and genome instability.</li>
+                </ul>
+
+                <h3>Conferences & abstracts (selected)</h3>
+                <ul>
+                    <li><strong>ACMG 2024 (Platform):</strong> Canadian lab's clinical validation experience using OGM as a front-line diagnostic.</li>
+                    <li><strong>Bionano Showcase @ ACMG 2024 (Platform):</strong> Inter-platform comparison of <strong>Stratys vs. Saphyr</strong>.</li>
+                    <li><strong>ESHG 2024 (Poster, Berlin):</strong> Canadian experience applying OGM to hematologic neoplasms.</li>
+                    <li><strong>CGC 2024 (Poster):</strong> Preliminary results of OGM <strong>clinical verification</strong> in hematologic cancers.</li>
+                    <li><strong>ASH 2024 (Poster):</strong> <strong>Standard-of-care</strong> OGM — diagnostic & clinical impacts ~10 months post-implementation.</li>
+                    <li><strong>AMP 2024 (Posters):</strong>
+                        <ul>
+                            <li>Turnaround time comparison: <strong>Karyotyping vs. OGM</strong> in acute leukemia diagnostics.</li>
+                            <li>Novel <strong>TKI-sensitive PDGFRB</strong> fusion detected via <strong>OGM + Nanopore</strong>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>CCMG 2024 (Abstract):</strong> Lessons learned after deploying OGM as a first-line diagnostic.</li>
+                    <li><strong>CCMG 2023 (Talk & Poster):</strong> OGM for cryptic <strong>KMT2A</strong> rearrangements; early Canadian experience.</li>
+                    <li><strong>ASH 2023 (Poster):</strong> Additional diagnostic yield using OGM in <strong>69 informative AL cases</strong> (single-center).</li>
+                </ul>
+
+                <h3>Grants & collaboration</h3>
+                <ul>
+                    <li><strong>Precision Health Catalyst (Co-I):</strong> Combining <strong>rapid targeted gene sequencing</strong> with <strong>high-resolution OGM</strong> to optimize therapy selection in <strong>AML</strong>.</li>
+                    <li>Ongoing collaborations across VGH Cytogenomics on <strong>method development, platform evaluation,</strong> and <strong>clinical reporting</strong>.</li>
+                </ul>
+
+                <h3>Impact & next steps</h3>
+                <p>Our OGM program has accelerated detection of clinically relevant structural variants and informed treatment discussions for hematologic cancers. Current efforts focus on <strong>expanding OGM</strong> beyond acute leukemias (e.g., <strong>MDS</strong>, relapsed leukemias, CLL) and deepening <strong>integration with long-read sequencing</strong> for comprehensive genome profiling.</p>
+            </div>
+
+            <a href="../index.html#research" class="back-link">← Back to Research</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epigenetic Inheritance - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            padding: 140px 0 100px;
+        }
+
+        .article-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .article-content a {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            article {
+                padding: 120px 0 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Epigenetics · Inheritance</div>
+            <h1>Transgenerational Epigenetic Inheritance</h1>
+            <p class="article-subtitle">What do we really pass on to our kids?</p>
+
+            <div class="article-content">
+                <p>The age-old question "nature vs nurture" still fascinates us. Do we inherit only DNA from our parents, or do their experiences leave marks that we pass on too? Modern science shows it's not one or the other – traits like height, disease risk, stress response emerge from a complex mix of genes, environment, and possibly inherited epigenetic changes. Below, I explore what we do know about transgenerational epigenetic inheritance (TEI), what remains unproven, and where recent research is pointing.</p>
+
+                <h2>Heritability, epigenetics, and transgenerational effects</h2>
+
+                <ul>
+                    <li><strong>Heritability</strong> refers to how much of the variation in a trait (like eye colour, height, or disease risk) can be attributed to inherited genetic differences.</li>
+                    <li><strong>Epigenetics</strong> describes biochemical modifications to DNA or its associated proteins (e.g. DNA methylation, histone modifications, non-coding RNAs) that affect gene expression without changing the underlying DNA sequence.</li>
+                    <li><strong>Transgenerational epigenetic inheritance (TEI)</strong> means that epigenetic changes acquired during one generation are passed via the germline (egg/sperm) to future generations, influencing their traits.</li>
+                </ul>
+
+                <h2>What is known: examples & the Dutch famine</h2>
+
+                <p>One of the most cited human examples is the <strong>Dutch Hunger Winter</strong> (1944–45). During this famine, pregnant women exposed to severe malnutrition gave birth to children who decades later were more prone to obesity, cardiovascular disease, and diabetes compared to those unexposed. Follow-up studies even showed altered DNA methylation at metabolic genes such as IGF2 in famine-exposed offspring. This suggested that maternal environment might have left a biological "memory" in the next generation.</p>
+
+                <p>But key caveats remain:</p>
+
+                <ul>
+                    <li><strong>In utero/pregnancy effects</strong> – malnutrition directly affects the fetus during pregnancy, making it difficult to separate germline inheritance from developmental programming.</li>
+                    <li><strong>Reprogramming in germ cells</strong> – mammalian germlines and early embryos undergo sweeping waves of epigenetic "resetting." Most acquired marks are erased, with only rare exceptions (e.g. imprinted genes, some transposable elements) escaping.</li>
+                    <li><strong>Confounding social and cultural inheritance</strong> – trauma, diet, stress, and parenting styles often transmit across generations in non-genetic ways, which can mimic epigenetic inheritance.</li>
+                </ul>
+
+                <p>Thus, while the Dutch famine remains a compelling case study, it is not definitive proof of TEI in humans.</p>
+
+                <h2>What recent research adds</h2>
+
+                <p>Recent studies continue to refine our understanding and suggest that while TEI in humans remains unproven, there are promising directions:</p>
+
+                <ul>
+                    <li><strong>Critical reviews remain cautious.</strong> A 2024 perspective by Adrian Bird concludes that while TEI is biologically plausible, evidence in mammals is still inconclusive. Most studies show correlations, not definitive proof of germline passage.</li>
+                    <li><strong>Human germline reprogramming models.</strong> In 2024, Murase et al. recreated human primordial germ cell-like cells (hPGCLCs) in vitro and showed how they undergo demethylation and histone resetting. This breakthrough offers a tool to test which epigenetic marks might escape erasure, shedding light on the bottleneck of inheritance.</li>
+                    <li><strong>Trauma and adversity.</strong> A 2025 review of trauma-linked epigenetic changes highlights alterations in stress-related genes (NR3C1, FKBP5) in children of trauma survivors. But it cautions that environment and social context remain major confounders, and persistence into further generations is unproven.</li>
+                    <li><strong>Animal models.</strong> Rodent studies show stronger TEI for diet, toxins, and endocrine disruptors, but effects often fade after 1–2 generations under controlled conditions. Some escapees (e.g. small RNAs in sperm) suggest possible transmission pathways, but human relevance is unclear.</li>
+                </ul>
+
+                <p>Together, these findings highlight both the possibility of TEI and the difficulty of proving it in humans.</p>
+
+                <h2>What we don't know yet</h2>
+
+                <ul>
+                    <li>Whether specific adult-life exposures (stress, diet, trauma) lead to epigenetic marks that reliably persist in the germline across generations.</li>
+                    <li>Which marks are most capable of surviving germline reprogramming – imprinted regions and transposable elements are candidates.</li>
+                    <li>To what extent observed "inheritance" reflects persistent cultural or socioeconomic conditions rather than biology.</li>
+                </ul>
+
+                <h2>Why this matters</h2>
+
+                <p>If TEI turns out to be a robust phenomenon in humans, the implications are profound:</p>
+
+                <ul>
+                    <li>Preventive medicine would need to account for parents' and grandparents' exposures, not just an individual's.</li>
+                    <li>Public health interventions might target critical preconception and prenatal windows.</li>
+                    <li>Ethical and equity concerns would intensify: those disproportionately exposed to adversity may face multi-generational health consequences.</li>
+                </ul>
+
+                <h2>Bottom line</h2>
+
+                <p>As of 2025:</p>
+
+                <ul>
+                    <li>There is <strong>clear evidence</strong> that environmental exposures (famine, trauma, toxins) leave epigenetic signatures.</li>
+                    <li>Germline reprogramming in humans is a powerful barrier, erasing most acquired marks.</li>
+                    <li>There is <strong>no definitive proof</strong> that acquired epigenetic changes are reliably inherited across multiple human generations.</li>
+                    <li>Cutting-edge tools like human germline models, careful cohort studies, and improved tracking of epigenetic marks are bringing us closer to an answer.</li>
+                </ul>
+            </div>
+
+            <a href="../index.html#writing" class="back-link">← Back to Writing</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>

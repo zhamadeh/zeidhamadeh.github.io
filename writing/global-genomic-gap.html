@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Genomic Gap - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            padding: 140px 0 100px;
+        }
+
+        .article-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .note {
+            color: var(--text-tertiary);
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #fafafa;
+            border-left: 3px solid var(--border);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .box {
+            border-left: 4px solid #00CBCC;
+            background-color: #E6FFFF;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .box strong {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            article {
+                padding: 120px 0 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Genomics · Global Health · TEDxUBC 2025</div>
+            <h1>The Global Genomic Gap: from disparity to diversity</h1>
+            <p class="article-subtitle">Why representation in genomics matters for everyone</p>
+
+            <div class="article-content">
+                <p class="note">This post was adapted from my TEDxUBC talk in May 2025. I'll post the video link here once it's available.</p>
+
+                <p>We're standing at the edge of a medical revolution.</p>
+
+                <p>Twenty years ago, the Human Genome Project promised us a future where treatments aren't one-size-fits-all, but tailor-made—based on your DNA, your lifestyle, even the microbes in your gut. A future where we can predict who's at risk for disease or how your body might respond to a drug before you even take it.</p>
+
+                <p>And in many ways, that future is here. Gene sequencing is faster and cheaper than ever. Entire genomes can now be scanned in hours, and for the first time in history, researchers have fully sequenced the entire human genome—thanks to the Telomere-to-Telomere consortium led in part by Dr. Karen Miga, whom I had the privilege of meeting.</p>
+
+                <p>Personalized medicine is no longer a dream. It's already reshaping how we diagnose, treat, and prevent disease.</p>
+
+                <p>But here's the catch: this future doesn't apply equally to everyone.</p>
+
+                <h2>The genomic gap</h2>
+
+                <p>Over 90% of sequenced genomes come from people of European descent, even though they make up just 16% of the world's population. That means 84% of the world is underrepresented in the very science that is supposed to serve everyone.</p>
+
+                <p>It's like trying to build GPS maps of the world using only roads from Europe, then expecting them to guide you in Lagos, Lima, or Mumbai. The coordinates don't line up, the landmarks are missing, and the directions can send you entirely the wrong way.</p>
+
+                <p>This is what we call the global genomic gap—and it's one of the biggest blind spots in modern medicine.</p>
+
+                <h2>A personal story</h2>
+
+                <p>Before I began medical school, I worked as a genome analyst at Vancouver General Hospital. My job was to interpret the DNA of cancer patients: to decide whether mutations mattered, whether they explained the cancer, or whether they could guide treatment.</p>
+
+                <p>One day, we received a sample from a woman of East African descent. We ran all the tests. We found all the mutations. But when we tried to interpret them, the databases we rely on came up empty.</p>
+
+                <p>Why? Because those databases were built mostly from European data.</p>
+
+                <p>The report went back to her oncologist with the mutations marked as "variants of unknown significance." Not because they weren't important, but because we simply didn't have the reference data to know what they meant.</p>
+
+                <p>That patient became another casualty of the genomic gap—not because of the science itself, but because of who the science was built for.</p>
+
+                <h2>Why it matters</h2>
+
+                <p>The consequences ripple far beyond cancer:</p>
+
+                <ul>
+                    <li><strong>Heart disease risk:</strong> Polygenic risk scores—tools used to predict who's at risk for complex diseases—work well in Europeans. But in South Asians, who actually have some of the highest rates of premature heart disease, they can be up to four times less accurate. A man given a "low risk" score may still be at high risk—and the first sign something's wrong could be a cardiac arrest.</li>
+                    <li><strong>Neglected diseases:</strong> In rural Ethiopia, children with podoconiosis—a disabling condition triggered by genetic susceptibility to volcanic soil—remain invisible in genomic databases. No known mutations. No guidelines. No path to precision medicine.</li>
+                </ul>
+
+                <p>When groups are excluded from research, they are excluded from its benefits.</p>
+
+                <h2>The deeper issue: race ≠ genetics</h2>
+
+                <p>It might seem like the fix is simple: just sequence more people. But this isn't only a numbers problem. It's also about how we categorize people.</p>
+
+                <p>Too often, genomic research falls back on outdated ideas that genetic diversity can be sorted neatly into racial categories: Black, White, Asian. But these are social constructs, not biological ones.</p>
+
+                <p>Most human genetic diversity exists within these categories, not between them. In fact, the greatest genetic diversity in the world is found in African populations, because all non-African groups descend from a relatively small subset of ancestors.</p>
+
+                <p>So when we use race as a stand-in for ancestry, we risk reinforcing the very inequities we're trying to fix.</p>
+
+                <div class="box">
+                    <strong>Box 1: Key definitions of identity</strong><br><br>
+                    <p><strong>Ancestry:</strong> the genetic origin or lineage of a person, reflecting where their biological ancestors come from.</p>
+                    <p><strong>Race:</strong> a socially constructed category based on perceived physical traits (such as skin color). Race has no precise biological basis, but has real social and historical consequences.</p>
+                    <p><strong>Ethnicity:</strong> a shared cultural identity that may include common ancestry, language, traditions, or history within a group of people.</p>
+                    <p><strong>Nationality:</strong> a legal or political identity describing a person's citizenship or formal belonging to a nation-state.</p>
+                </div>
+
+                <h2>Signs of progress</h2>
+
+                <p>Thankfully, there are efforts underway to close this gap:</p>
+
+                <ul>
+                    <li><strong>H3Africa</strong> is supporting African scientists to lead large-scale genomics studies on diseases that matter to their populations, already uncovering new genetic risk factors for kidney disease.</li>
+                    <li>In South Asia, the PARKH project is building one of the largest psychiatric genetics cohorts in the region.</li>
+                    <li>In Canada, the <strong>Silent Genomes Project</strong> has partnered with Indigenous communities to create a First Nations–governed reference genome database under principles of Indigenous Data Sovereignty: nothing about us without us.</li>
+                    <li>The <strong>All of Us Research Program</strong> in the U.S. is enrolling over a million participants, half from historically underrepresented groups, to build a richly representative dataset for equitable precision medicine.</li>
+                </ul>
+
+                <p>These projects are proving that when science is inclusive, it doesn't just fill gaps—it makes new discoveries that benefit everyone.</p>
+
+                <h2>A new foundation: the human pangenome</h2>
+
+                <p>Even the "human genome" itself—the reference used for decades—was based on a single individual. But genomes are not identical; variation is the rule.</p>
+
+                <p>That's why researchers are building a pangenome: a reference built from hundreds of diverse genomes, represented in a flexible, graph-based structure. Unlike a single linear genome, the pangenome captures the full spectrum of variation across populations.</p>
+
+                <p>A better reference genome means fewer missed diagnoses, fewer uncertain variants, and more accurate answers—for everyone.</p>
+
+                <h2>Closing the gap</h2>
+
+                <p>The global genomic gap is not just a scientific oversight—it's a moral one. If personalized medicine is to live up to its promise, it must be personalized for all of us, not just some of us.</p>
+
+                <p>This will require more than technology. It will require partnerships built on trust, shared leadership, and benefit-sharing. It will require moving away from helicopter science and toward community-driven research.</p>
+
+                <p>We have the tools. We have the talent. What we need now is the will.</p>
+
+                <p>The genomic revolution is here. Let's make sure it doesn't leave anyone behind.</p>
+            </div>
+
+            <a href="../index.html#writing" class="back-link">← Back to Writing</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>
