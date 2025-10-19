@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Heritability - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Hidden Heritability">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+        article { padding: 140px 0 100px; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .article-content p { margin-bottom: 1.5rem; line-height: 1.8; color: var(--text-secondary); }
+        .article-content h2 { font-size: 1.75rem; font-weight: 500; margin-top: 3rem; margin-bottom: 1.5rem; color: var(--text-primary); }
+        .article-content h3 { font-size: 1.375rem; font-weight: 500; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .article-content ul { margin: 1.5rem 0; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.75rem; line-height: 1.7; color: var(--text-secondary); }
+        .article-content strong { color: var(--text-primary); font-weight: 600; }
+        .article-content a { color: var(--text-primary); text-decoration: underline; }
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: var(--text-primary); }
+        footer { padding: 3rem 0; border-top: 1px solid var(--border); text-align: center; }
+        footer p { color: var(--text-tertiary); font-size: 0.875rem; }
+        @media (max-width: 768px) {
+            article { padding: 120px 0 80px; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <h1>Hidden Heritability</h1>
+            <div class="article-content">
+                <p>---</p>
+<p>layout: post</p>
+<p>title: Where Is All the Hidden Heritability?</p>
+<p>subtitle: Unlocking the missing pieces of the genetic puzzle</p>
+<p>gh-repo: zhamadeh/zhamadeh.github.io</p>
+<p>gh-badge: [star, fork, follow]</p>
+<p>tags: [heritability, genetics, sequencing, hidden variation, Moore's law]</p>
+<p>thumbnail-img: /assets/img/hert.jpeg</p>
+<p>comments: true</p>
+<p>---</p>
+
+<p>When I was a kid, I’d joke that my brother must have been adopted—his eye color, hair, and height didn’t match mine or our parents’. Even without formal training in genetics, most of us intuitively expect children to resemble their parents. This expectation lies at the heart of <strong>heritability</strong>: the proportion of variation in a trait within a population that can be explained by genetic factors.  </p>
+
+<p>We can estimate heritability without knowing the exact genes involved. For example, comparing identical twins shows that height is about <strong>80–90% heritable</strong>. Similarly, schizophrenia has an estimated heritability of ~80%. But here’s the puzzle: if we sequenced the human genome more than 20 years ago, why do we still struggle to pinpoint the specific genetic causes of these highly heritable traits and diseases?</p>
+
+<p>---</p>
+
+<h3>The search for genetic causes</h3>
+
+<p>To uncover genetic risk factors, researchers run <strong>genome-wide association studies (GWAS)</strong>. These compare DNA sequences from people with a disease to those without it, searching for differences. GWAS have identified thousands of genetic variants—but together they usually explain only a small fraction (often ~5%) of the expected heritability.  </p>
+
+<p>This discrepancy is called the <strong>“missing heritability problem.”</strong> Where is the rest hiding?</p>
+
+<p>---</p>
+
+<h3>Two key explanations</h3>
+
+<ol>
+<li>**Complexity of genetic networks**  </li>
+</ol>
+<ul>
+<li>Most traits aren’t caused by one gene but by hundreds—or even thousands.  </li>
+<li>Different combinations of mutations can produce the same outcome.  </li>
+<li>This redundancy makes it statistically challenging to detect rare combinations, because studies would need enormous sample sizes.</li>
+</ul>
+
+<ol>
+<li>**Limits of current sequencing**  </li>
+</ol>
+<ul>
+<li>Even though sequencing has outpaced **Moore’s law** in speed and cost, parts of the genome remain inaccessible.  </li>
+<li>Many important variants involve **structural changes**—large chunks of DNA that are inverted, duplicated, or moved. These are much harder to detect than single-nucleotide changes.</li>
+</ul>
+
+<p>---</p>
+
+<h3>Why structural variation is so hard to capture</h3>
+
+<p>Several technical barriers limit our ability to map these large-scale rearrangements:</p>
+
+<ol>
+<li>**Reference bias** – Standard sequencing compares reads to a reference genome. Structural changes that don’t match this reference often go undetected.  </li>
+<li>**Repetitive DNA** – Many rearrangements sit within repetitive regions (“sequencing deserts”) that are nearly impossible to map correctly.  </li>
+<li>**Diploidy** – Humans inherit two copies of each chromosome (maternal and paternal). Conventional sequencing often collapses them into one “consensus” sequence, obscuring important differences.</li>
+</ol>
+
+<p>---</p>
+
+<h3>Why this matters</h3>
+
+<p>Until we can <strong>fully capture all forms of genetic variation</strong>, much of heritability will remain unexplained. Advances in sequencing technology—especially those that can resolve structural variants and distinguish between maternal and paternal genomes—are key to solving this puzzle.  </p>
+
+<p>Predicting height from DNA would be a fun parlor trick. But more importantly, achieving this level of precision would represent a <strong>true mastery of biology’s language</strong>—with profound implications for medicine, disease prediction, and our understanding of life itself.</p>
+            </div>
+            <a href="../index.html#writing" class="back-link">← Back to Writing</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>
