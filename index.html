@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeid Hamadeh - Genomics & Medicine</title>
+    <meta name="description" content="PhD, MS2, Clinical Scientist and Genome Analyst">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+            --bg-secondary: #fafafa;
+            --accent: #0a0a0a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background: var(--text-primary);
+            color: var(--bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo.visible {
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Page Views */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 100px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h1 {
+            font-size: 3.75rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.04em;
+            color: var(--text-primary);
+        }
+
+        .hero .subtitle {
+            font-size: 1.375rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+        }
+
+        .hero .bio {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            max-width: 720px;
+        }
+
+        .hero .bio p {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Links */
+        .links {
+            margin-top: 2.5rem;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--text-primary);
+            transition: width 0.2s ease;
+        }
+
+        .links a:hover {
+            color: var(--text-primary);
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+
+        /* Section */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-tertiary);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+            font-size: 2.25rem;
+            font-weight: 300;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+        }
+
+        /* Preview Items (Homepage) */
+        .preview-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .preview-item h3 {
+            font-size: 1.375rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .preview-item h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .preview-item h3 a:hover {
+            opacity: 0.6;
+        }
+
+        .preview-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .view-all {
+            margin-top: 2.5rem;
+            display: inline-block;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 1px solid var(--text-primary);
+            padding-bottom: 2px;
+            transition: opacity 0.2s ease;
+        }
+
+        .view-all:hover {
+            opacity: 0.6;
+        }
+
+        /* Detail Items (Individual Pages) */
+        .items-list {
+            display: grid;
+            gap: 3.5rem;
+        }
+
+        .item {
+            position: relative;
+            padding-left: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .item:hover {
+            transform: translateX(4px);
+        }
+
+        .item-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.625rem;
+            font-weight: 500;
+        }
+
+        .item h3 {
+            font-size: 1.625rem;
+            font-weight: 400;
+            margin-bottom: 0.875rem;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .item h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+        }
+
+        .item h3 a::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+
+        .item h3 a:hover::after {
+            width: 100%;
+        }
+
+        .item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .item .additional-info {
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3.5rem 0 4rem;
+            margin-top: 0;
+            border-top: 1px solid var(--border);
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        footer a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.125rem;
+            }
+
+            .hero .bio {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-subtitle {
+                font-size: 1.875rem;
+            }
+
+            .item h3 {
+                font-size: 1.375rem;
+            }
+
+            footer .container {
+                flex-direction: column;
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" id="navLogo" onclick="showPage('home')">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
+                <li><a href="#" onclick="showPage('research')">Research</a></li>
+                <li><a href="#" onclick="showPage('writing')">Writing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <div class="container">
+            <section class="hero">
+                <h1 id="mainTitle">Zeid Hamadeh</h1>
+                <p class="subtitle">PhD, MS2, Clinical Scientist/Genome Analyst</p>
+                
+                <div class="bio">
+                    <p>I'm a second-year medical student at the University of British Columbia with a background in genome science and cancer research. Before medical school, I completed a PhD in Genome Science and Technology at UBC and worked as a clinical research scientist and genome analyst at Vancouver General Hospital, using genetic sequencing and bioinformatics to support cancer diagnostics.</p>
+                    
+                    <p>My current interests bridge clinical medicine and genomics, with a focus on how advances in genetic technologies can inform patient care.</p>
+                </div>
+
+                <div class="links">
+                    <a href="https://github.com/zhamadeh" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/hamadeh_zeid" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com/in/zeid-hamadeh-0aa0a4137/" target="_blank">LinkedIn</a>
+                    <a href="mailto:zeid.hamadeh@vch.ca">Email</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title">Recent Work</div>
+                    <h2 class="section-subtitle">Featured Research</h2>
+                </div>
+
+                <div class="preview-list">
+                    <div class="preview-item">
+                        <h3><a href="https://zeidhamadeh.com/Optical-genome-mapping/" target="_blank">Optical Genome Mapping</a></h3>
+                        <p>Clinical implementation of advanced genome analysis technology for structural variant detection.</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3><a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(21)00227-7" target="_blank">Single-Cell Sequencing</a></h3>
+                        <p>Novel approaches to cellular analysis and genomic profiling.</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3><a href="https://www.frontiersin.org/articles/10.3389/fcell.2020.00324/full" target="_blank">DNA Repair in Hereditary Cancer</a></h3>
+                        <p>Investigating mechanisms of genome stability in cancer predisposition.</p>
+                    </div>
+                </div>
+
+                <a href="#" onclick="showPage('research')" class="view-all">View all research →</a>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title">Latest Articles</div>
+                    <h2 class="section-subtitle">Recent Writing</h2>
+                </div>
+
+                <div class="preview-list">
+                    <div class="preview-item">
+                        <h3><a href="https://zeidhamadeh.com/2022-11-05-African_genomes/" target="_blank">Global Genomic Gap</a></h3>
+                        <p>Based on my TEDxUBC 2025 talk on disparities in genomic research.</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3><a href="https://zeidhamadeh.com/2021-05-06-tgei/" target="_blank">Epigenetic Inheritance</a></h3>
+                        <p>How environmental factors influence gene expression across generations.</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3><a href="https://zeidhamadeh.com/2020-03-27-Hidden_heritability/" target="_blank">Hidden Heritability</a></h3>
+                        <p>The mystery of missing heritability in complex genetic traits.</p>
+                    </div>
+                </div>
+
+                <a href="#" onclick="showPage('writing')" class="view-all">View all writing →</a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Research Page -->
+    <div id="researchPage" class="page">
+        <div class="container">
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title">Publications</div>
+                    <h2 class="section-subtitle">Research</h2>
+                </div>
+
+                <div class="items-list">
+                    <div class="item">
+                        <div class="item-meta">Clinical Project · Current</div>
+                        <h3><a href="https://zeidhamadeh.com/Optical-genome-mapping/" target="_blank">Optical Genome Mapping</a></h3>
+                        <p>Clinical implementation of advanced genome analysis technology for structural variant detection.</p>
+                        <p class="additional-info">Leading the clinical integration of optical genome mapping (OGM) technology at Vancouver General Hospital. This cutting-edge approach enables comprehensive detection of structural variants, providing insights that traditional sequencing methods may miss in cancer diagnostics and genetic disease evaluation.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Cell Reports Methods · 2021</div>
+                        <h3><a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(21)00227-7" target="_blank">Single-Cell Sequencing</a></h3>
+                        <p>Novel approaches to cellular analysis and genomic profiling at single-cell resolution.</p>
+                        <p class="additional-info">This work presents innovative methodologies for analyzing genomic data at the single-cell level, enabling more precise characterization of cellular heterogeneity in cancer and other complex diseases.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Frontiers in Cell and Developmental Biology · 2020</div>
+                        <h3><a href="https://www.frontiersin.org/articles/10.3389/fcell.2020.00324/full" target="_blank">DNA Repair in Hereditary Cancer</a></h3>
+                        <p>Investigating mechanisms of genome stability in cancer predisposition syndromes.</p>
+                        <p class="additional-info">Research focused on understanding how defects in DNA repair pathways contribute to hereditary cancer susceptibility, with implications for genetic counseling and targeted therapies.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Genomics · 2022</div>
+                        <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S1046202322001025" target="_blank">Genome Instability in Cancer</a></h3>
+                        <p>Understanding genomic alterations driving cancer development and progression.</p>
+                        <p class="additional-info">Comprehensive analysis of chromosomal instability patterns in cancer genomes, identifying key mechanisms that drive tumor evolution and therapeutic resistance.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Clinical Journal of Pathology</div>
+                        <h3><a href="https://www.flipbookserver.com/CJP-16-3" target="_blank">Nanopore Sequencing in AML</a></h3>
+                        <p>Application of long-read sequencing technology in acute myeloid leukemia diagnostics.</p>
+                        <p class="additional-info">Clinical implementation of nanopore sequencing for rapid detection of genomic alterations in AML, demonstrating potential for real-time diagnostics and treatment planning.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Writing Page -->
+    <div id="writingPage" class="page">
+        <div class="container">
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title">Articles</div>
+                    <h2 class="section-subtitle">Science Writing</h2>
+                </div>
+
+                <div class="items-list">
+                    <div class="item">
+                        <div class="item-meta">Genomics · Global Health · TEDxUBC 2025</div>
+                        <h3><a href="https://zeidhamadeh.com/2022-11-05-African_genomes/" target="_blank">Global Genomic Gap</a></h3>
+                        <p>Addressing disparities in genomic research and the need for diverse representation in genetic databases.</p>
+                        <p class="additional-info">Based on my TEDxUBC 2025 talk. An exploration of how the lack of diversity in genomic datasets creates health inequities and limits the potential of precision medicine for underrepresented populations worldwide.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Epigenetics · Inheritance · 2021</div>
+                        <h3><a href="https://zeidhamadeh.com/2021-05-06-tgei/" target="_blank">Epigenetic Inheritance</a></h3>
+                        <p>Exploring how environmental factors influence gene expression across generations.</p>
+                        <p class="additional-info">A deep dive into transgenerational epigenetic inheritance, examining how environmental exposures can leave lasting molecular marks that affect descendants.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Genetics · Heritability · 2020</div>
+                        <h3><a href="https://zeidhamadeh.com/2020-03-27-Hidden_heritability/" target="_blank">Hidden Heritability</a></h3>
+                        <p>Unraveling the mystery of missing heritability in complex genetic traits.</p>
+                        <p class="additional-info">Investigating why genome-wide association studies often fail to explain the full heritability of complex traits, and what this means for our understanding of genetics.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Molecular Biology · 2019</div>
+                        <h3><a href="https://zeidhamadeh.com/2019-09-09-DNA.repair/" target="_blank">DNA Repair</a></h3>
+                        <p>Understanding the molecular mechanisms that maintain genome integrity.</p>
+                        <p class="additional-info">An overview of DNA repair pathways and their critical role in preventing mutations, aging, and cancer development.</p>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Oncology · 2016</div>
+                        <h3><a href="https://zeidhamadeh.com/2016-11-21-cancer/" target="_blank">Cancer</a></h3>
+                        <p>Insights into cancer biology, genomics, and the evolution of malignancies.</p>
+                        <p class="additional-info">A comprehensive look at cancer as an evolutionary process, examining how tumors develop, adapt, and resist treatment through genomic changes.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+            <div class="footer-links">
+                <a href="https://pathology.ubc.ca/2024/02/27/hamadeh-zeid/" target="_blank">UBC Profile</a>
+                <a href="https://zeidhamadeh.com/volleyball/">Volleyball</a>
+                <a href="https://zeidhamadeh.com/Optical-genome-mapping/">Projects</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide logo based on scroll position
+        const navLogo = document.getElementById('navLogo');
+        const mainTitle = document.getElementById('mainTitle');
+
+        function handleScroll() {
+            if (document.getElementById('homePage').classList.contains('active')) {
+                const titleRect = mainTitle.getBoundingClientRect();
+                if (titleRect.bottom < 0) {
+                    navLogo.classList.add('visible');
+                } else {
+                    navLogo.classList.remove('visible');
+                }
+            } else {
+                navLogo.classList.add('visible');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Page navigation
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            if (pageName === 'home') {
+                document.getElementById('homePage').classList.add('active');
+            } else if (pageName === 'research') {
+                document.getElementById('researchPage').classList.add('active');
+            } else if (pageName === 'writing') {
+                document.getElementById('writingPage').classList.add('active');
+            }
+
+            // Update nav active state
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Trigger scroll handler to show/hide logo
+            setTimeout(handleScroll, 100);
+        }
+
+        // Initial check
+        handleScroll();
+    </script>
+</body>
+</html>
