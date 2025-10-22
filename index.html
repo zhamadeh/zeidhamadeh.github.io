@@ -197,134 +197,162 @@
             font-size: 0.875rem;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             color: var(--text-tertiary);
             margin-bottom: 0.75rem;
         }
 
         .section-subtitle {
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             font-weight: 300;
             color: var(--text-primary);
-            letter-spacing: -0.03em;
-        }
-
-        /* Preview Items (Homepage) */
-        .preview-list {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .preview-item h3 {
-            font-size: 1.375rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
         }
 
-        .preview-item h3 a {
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-
-        .preview-item h3 a:hover {
-            opacity: 0.6;
-        }
-
-        .preview-item p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .view-all {
-            margin-top: 2.5rem;
-            display: inline-block;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-bottom: 1px solid var(--text-primary);
-            padding-bottom: 2px;
-            transition: opacity 0.2s ease;
-        }
-
-        .view-all:hover {
-            opacity: 0.6;
-        }
-
-        /* Detail Items (Individual Pages) */
+        /* Items List */
         .items-list {
-            display: grid;
-            gap: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
         }
 
         .item {
-            position: relative;
-            padding-left: 0;
-            transition: transform 0.2s ease;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
         }
 
-        .item:hover {
-            transform: translateX(4px);
+        .item:last-child {
+            border-bottom: none;
         }
 
         .item-meta {
             font-size: 0.8125rem;
             color: var(--text-tertiary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 0.625rem;
+            margin-bottom: 1rem;
             font-weight: 500;
+            letter-spacing: 0.02em;
         }
 
         .item h3 {
-            font-size: 1.625rem;
+            font-size: 1.5rem;
             font-weight: 400;
-            margin-bottom: 0.875rem;
-            letter-spacing: -0.02em;
-            line-height: 1.3;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
         }
 
         .item h3 a {
             color: var(--text-primary);
             text-decoration: none;
-            position: relative;
-            display: inline-block;
+            transition: color 0.2s ease;
         }
 
-        .item h3 a::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--text-primary);
-            transition: width 0.3s ease;
-        }
-
-        .item h3 a:hover::after {
-            width: 100%;
+        .item h3 a:hover {
+            color: var(--text-secondary);
         }
 
         .item p {
             color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 1rem;
+            line-height: 1.75;
             margin-bottom: 0.75rem;
         }
 
-        .item .additional-info {
-            font-size: 0.9rem;
+        .additional-info {
             color: var(--text-tertiary);
-            line-height: 1.6;
+            font-size: 0.9375rem;
+        }
+
+        /* Media embeds */
+        .project-media {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-media img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .project-media video {
+            width: 100%;
+            max-width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .media-link {
+            display: inline-block;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .media-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* Preview List */
+        .preview-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .preview-item {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .preview-item:last-child {
+            border-bottom: none;
+        }
+
+        .preview-item h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .preview-item h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .preview-item h3 a:hover {
+            color: var(--text-secondary);
+        }
+
+        .preview-item p {
+            color: var(--text-secondary);
+            line-height: 1.75;
+        }
+
+        .view-all {
+            display: inline-block;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+            margin-top: 2rem;
+        }
+
+        .view-all:hover {
+            color: var(--text-primary);
         }
 
         /* Footer */
         footer {
-            padding: 3.5rem 0 4rem;
-            margin-top: 0;
             border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            margin-top: 4rem;
         }
 
         footer .container {
@@ -338,86 +366,50 @@
             font-size: 0.875rem;
         }
 
-        footer .footer-links {
+        .footer-links {
             display: flex;
             gap: 2rem;
         }
 
-        footer a {
+        .footer-links a {
             color: var(--text-tertiary);
             text-decoration: none;
             font-size: 0.875rem;
             transition: color 0.2s ease;
         }
 
-        footer a:hover {
+        .footer-links a:hover {
             color: var(--text-primary);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-
-            .hero {
-                padding: 120px 0 80px;
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
             }
 
             .hero h1 {
-                font-size: 2.75rem;
+                font-size: 2.5rem;
             }
 
             .hero .subtitle {
                 font-size: 1.125rem;
             }
 
-            .hero .bio {
-                font-size: 1rem;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
             .section-subtitle {
-                font-size: 1.875rem;
-            }
-
-            .item h3 {
-                font-size: 1.375rem;
+                font-size: 2rem;
             }
 
             footer .container {
                 flex-direction: column;
                 gap: 1.5rem;
-                align-items: flex-start;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1.5rem;
+                text-align: center;
             }
 
-            .nav-container {
-                padding: 1rem 1.5rem;
-            }
-
-            .hero h1 {
-                font-size: 2.25rem;
-            }
-
-            .section-subtitle {
-                font-size: 1.5rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -426,12 +418,13 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo" id="navLogo" onclick="showPage('home')">Zeid Hamadeh</a>
+            <a href="#" onclick="showPage('home')" class="logo" id="navLogo">Zeid Hamadeh</a>
             <ul class="nav-links">
                 <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
                 <li><a href="#" onclick="showPage('research')">Research</a></li>
                 <li><a href="#" onclick="showPage('writing')">Writing</a></li>
-                <li><a href="mailto:zeid.hamadeh@vch.ca">Contact</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -441,18 +434,19 @@
         <div class="container">
             <section class="hero">
                 <h1 id="mainTitle">Zeid Hamadeh</h1>
-                <p class="subtitle">PhD, MS2, Clinical Scientist/Genome Analyst</p>
+                <p class="subtitle">PhD, MS2, Clinical Scientist & Genome Analyst</p>
                 
                 <div class="bio">
-                    <p>I'm a second-year medical student at the University of British Columbia with a background in genome science and cancer research. Before medical school, I completed a PhD in Genome Science and Technology at UBC and worked as a clinical research scientist and genome analyst at Vancouver General Hospital, using genetic sequencing and bioinformatics to support cancer diagnostics.</p>
+                    <p>Clinical genome analyst and PhD candidate at UBC, combining advanced genomic analysis with medical training to bridge computational biology and clinical medicine. My work focuses on structural variants, cancer genomics, and implementing cutting-edge sequencing technologies in diagnostic laboratories.</p>
                     
-                    <p>My current interests bridge clinical medicine and genomics, with a focus on how advances in genetic technologies can inform patient care.</p>
+                    <p>Currently leading the clinical implementation of optical genome mapping at Vancouver General Hospital while pursuing medical training. Passionate about making genomic medicine accessible globally and addressing disparities in genomic research representation.</p>
                 </div>
 
                 <div class="links">
                     <a href="https://github.com/zhamadeh" target="_blank">GitHub</a>
                     <a href="https://twitter.com/hamadeh_zeid" target="_blank">Twitter</a>
                     <a href="https://www.linkedin.com/in/zeid-hamadeh-0aa0a4137/" target="_blank">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=XXXXX" target="_blank">Google Scholar</a>
                     <a href="https://pathology.ubc.ca/2024/02/27/hamadeh-zeid/" target="_blank">UBC Profile</a>
                     <a href="mailto:zeid.hamadeh@vch.ca">Email</a>
                 </div>
@@ -461,21 +455,21 @@
             <section class="section">
                 <div class="section-header">
                     <div class="section-title">Recent Work</div>
-                    <h2 class="section-subtitle">Featured Research</h2>
+                    <h2 class="section-subtitle">Research</h2>
                 </div>
 
                 <div class="preview-list">
                     <div class="preview-item">
                         <h3><a href="projects/optical-genome-mapping.html">Optical Genome Mapping</a></h3>
-                        <p>Clinical implementation of advanced genome analysis technology for structural variant detection.</p>
+                        <p>Clinical implementation of advanced genome analysis technology at Vancouver General Hospital.</p>
                     </div>
                     <div class="preview-item">
                         <h3><a href="https://www.cell.com/cell-reports-methods/fulltext/S2667-2375(21)00227-7" target="_blank">Single-Cell Sequencing</a></h3>
-                        <p>Novel approaches to single cell whole genome sequencing, analysis and genomic profiling.</p>
+                        <p>Novel approaches to cellular analysis and genomic profiling at single-cell resolution.</p>
                     </div>
                     <div class="preview-item">
-                        <h3><a href="https://www.frontiersin.org/articles/10.3389/fcell.2020.00324/full" target="_blank">DNA Repair in Hereditary Cancer</a></h3>
-                        <p>Investigating mechanisms of genome stability in cancer predisposition.</p>
+                        <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S1046202322001025" target="_blank">Genome Instability in Cancer</a></h3>
+                        <p>Understanding genomic alterations driving cancer development and progression.</p>
                     </div>
                 </div>
 
@@ -606,6 +600,47 @@
         </div>
     </div>
 
+    <!-- Projects Page -->
+    <div id="projectsPage" class="page">
+        <div class="container">
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-title">Development</div>
+                    <h2 class="section-subtitle">Projects</h2>
+                </div>
+
+                <div class="items-list">
+                    <div class="item">
+                        <div class="item-meta">Educational Tool · Current</div>
+                        <h3>MCQ Question Bank</h3>
+                        <p>Interactive multiple-choice question bank designed for medical education and exam preparation.</p>
+                        <p class="additional-info">A comprehensive web-based platform for creating, organizing, and practicing medical multiple-choice questions. Features include custom question sets, performance tracking, and detailed explanations for each answer. Built to support medical students in their preparation for board examinations and clinical assessments.</p>
+                        
+                        <div class="project-media">
+                            <video controls>
+                                <source src="mcq-bank.qt" type="video/quicktime">
+                                Your browser does not support the video tag. <a href="mcq-bank.qt">Download video</a>
+                            </video>
+                            <span class="media-link">Demo video of the MCQ Question Bank interface</span>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-meta">Clinical Tool · Current</div>
+                        <h3>CDM Grid</h3>
+                        <p>Clinical Decision-Making Grid for systematic differential diagnosis in movement disorders.</p>
+                        <p class="additional-info">An interactive diagnostic framework that organizes clinical findings, supporting evidence, and opposing evidence in a structured grid format. This tool helps clinicians systematically evaluate diagnoses by weighing likelihood scores against supporting and opposing clinical features. Particularly useful for complex cases involving neurological conditions like Parkinson's disease, multiple system atrophy, and stroke.</p>
+                        
+                        <div class="project-media">
+                            <img src="Screenshot 2025-10-22 at 7.16.00 AM.png" alt="CDM Grid interface showing movement disorders diagnosis">
+                            <span class="media-link">Screenshot of the CDM Grid interface for movement disorders</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -654,13 +689,17 @@
                 document.getElementById('researchPage').classList.add('active');
             } else if (pageName === 'writing') {
                 document.getElementById('writingPage').classList.add('active');
+            } else if (pageName === 'projects') {
+                document.getElementById('projectsPage').classList.add('active');
             }
 
             // Update nav active state
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
             });
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
 
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
