@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single-Cell Sequencing — Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --text-primary:#0a0a0a; --text-secondary:#525252; --text-tertiary:#a3a3a3; --border:#e5e5e5; --bg:#ffffff; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height:1.65; color:var(--text-primary); background:var(--bg); -webkit-font-smoothing:antialiased; }
+        nav { position: fixed; top:0; width:100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-bottom:1px solid var(--border); z-index:1000; }
+        .nav-container { max-width:960px; margin:0 auto; padding:1.25rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-weight:500; font-size:1rem; color:var(--text-primary); text-decoration:none; }
+        .nav-links { display:flex; gap:2rem; list-style:none; }
+        .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:0.9rem; }
+        .container { max-width:720px; margin:0 auto; padding:0 2rem; }
+        article { padding:140px 0 100px; }
+        .article-meta { font-size:0.8125rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; font-weight:500; }
+        h1 { font-size:2.5rem; font-weight:500; line-height:1.2; margin-bottom:1rem; }
+        .article-subtitle { font-size:1.25rem; color:var(--text-secondary); margin-bottom:1.25rem; font-weight:300; }
+        .article-content p { margin-bottom:1.25rem; line-height:1.8; color:var(--text-secondary); }
+        .article-content h3 { font-size:1.375rem; font-weight:500; margin-top:2rem; margin-bottom:0.75rem; color:var(--text-primary); }
+        .article-content ul { margin:1rem 0 1.5rem 1.25rem; }
+        .article-content li { margin-bottom:0.5rem; }
+        .article-image { display:block; max-width:100%; height:auto; margin:0.75rem 0 1rem; border-radius:6px; }
+        .figure-caption { font-size:0.95rem; color:var(--text-secondary); margin-top:0.5rem; line-height:1.45; }
+        .pub-list a { color:var(--text-secondary); text-decoration:none; }
+        .pub-list a:hover { color:var(--text-primary); text-decoration:underline; }
+        .back-link { display:inline-block; margin-top:2.5rem; color:var(--text-secondary); text-decoration:none; }
+        footer { padding:3rem 0; border-top:1px solid var(--border); text-align:center; }
+        footer p { color:var(--text-tertiary); font-size:0.875rem; }
+        @media (max-width:768px) { article { padding:120px 0 80px; } h1{font-size:2rem;} }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="mailto:zeid.hamadeh@vch.ca">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Graduate Research · University of British Columbia</div>
+            <h1>Single-Cell Sequencing</h1>
+            <p class="article-subtitle">Strand-seq, sister chromatid exchange mapping, and scalable single-cell protocols</p>
+
+            <div class="article-content">
+                <h2>Overview</h2>
+                <p>In graduate school, my research focused on understanding how human cells maintain genome stability by <strong>mapping DNA repair events in single cells</strong>. Specifically, I studied the <strong>RecQ family of DNA helicases</strong> (including <strong>RECQL5, BLM, WRN, and RECQL1</strong>), a group of genome “caretaker” enzymes linked to aging and cancer biology. My PhD work used <strong>single cell template strand sequencing (Strand-seq)</strong> to pinpoint where repair-driven genome alterations occur across the genome, at <strong>kilobase-scale resolution</strong>, far beyond what classic cytogenetic assays can localize.</p>
+
+                <h2>Research focus and approach</h2>
+                <p>I built a large panel of <strong>CRISPR-Cas9 single and double knockouts</strong> in the <strong>haploid KBM7</strong> model system (over 20 genotypes) to systematically test how loss of specific helicases changes patterns of genome instability. Using Strand-seq, I mapped <strong>sister chromatid exchange (SCE)</strong> events and <strong>copy number alteration (CNA)</strong> breakpoints at kilobase resolution and compared how different helicase-deficient backgrounds reshape these repair signatures.</p>
+
+                <h2>Key findings</h2>
+                <p>A major biological insight from this work is that repair events are not randomly distributed. SCEs were frequently enriched near <strong>actively transcribed genes</strong>, and near genomic elements such as <strong>G-quadruplex (G4) motifs</strong> and <strong>common fragile sites</strong>, supporting a model where RecQ helicases protect the genome at regions that are challenging for faithful replication and repair.</p>
+
+                <h2>Method development and impact</h2>
+                <p>I contributed to improving the scalability of Strand-seq through a <strong>one-pot, nanoliter-volume library prep</strong> approach (OP-Strand-seq), enabling high-throughput single-cell sequencing at low cost while capturing <strong>~10% to 25%</strong> of the genome per cell. This approach reduced per-library costs to roughly <strong>US$1 to US$2</strong> and increased throughput (hundreds of cells per run), making large-scale single-cell directional genomics more accessible. Beyond SCE mapping, I also developed bioinformatic strategies to generate genotype-specific callsets for <strong>CNAs, inversions, and translocations</strong>, expanding the utility of Strand-seq for structural variant discovery and genome instability research.</p>
+
+                <h2>Significance</h2>
+                <p>Together, this body of work helped connect helicase function to specific, vulnerable genomic contexts and strengthened Strand-seq as a practical platform for studying <strong>DNA repair, recombination, and structural variation</strong> in single cells, with clear relevance to mechanisms underlying <strong>cancer predisposition and aging</strong>.</p>
+            </div>
+                <figure>
+                    <img src="../image/strand-seq.jpg" alt="Strand-seq workflow" class="article-image">
+                    <figcaption class="figure-caption">Schematic of OP-Strand-seq: nanoliter-volume, one-pot library preparation enabling higher throughput and improved genome coverage per single cell.</figcaption>
+                </figure>
+             <a href="../index.html#research" class="back-link">← Back to Research</a>
+ 
+            </div>
+
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>
