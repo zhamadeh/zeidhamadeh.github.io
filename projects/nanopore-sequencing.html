@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Nanopore Sequencing — Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --text-primary: #0a0a0a; --text-secondary: #525252; --text-tertiary: #a3a3a3; --border: #e5e5e5; --bg: #ffffff; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.65; color: var(--text-primary); background: var(--bg); -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index:1000; }
+        .nav-container { max-width:960px; margin:0 auto; padding:1.25rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-weight:500; font-size:1rem; color:var(--text-primary); text-decoration:none; }
+        .nav-links { display:flex; gap:2rem; list-style:none; }
+        .nav-links a { color:var(--text-secondary); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+        .nav-links a:hover { color:var(--text-primary); }
+        .container { max-width:720px; margin:0 auto; padding:0 2rem; }
+        article { padding:140px 0 100px; }
+        .article-meta { font-size:0.8125rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:1rem; font-weight:500; }
+        h1 { font-size:2.5rem; font-weight:500; line-height:1.2; margin-bottom:1rem; }
+        .article-subtitle { font-size:1.25rem; color:var(--text-secondary); margin-bottom:3rem; font-weight:300; }
+        .article-image { display:block; max-width:100%; height:auto; margin:1.25rem 0 2rem; border-radius:8px; }
+        .figure-caption { font-size:0.95rem; color:var(--text-secondary); margin-top:0.5rem; line-height:1.5; }
+        .article-content a,
+        .note a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .article-content a:hover,
+        .note a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+        .article-content p { margin-bottom:1.5rem; line-height:1.8; color:var(--text-secondary); }
+        .article-content h3 { font-size:1.375rem; font-weight:500; margin-top:2.5rem; margin-bottom:1rem; color:var(--text-primary); }
+        .article-content ul { margin:1.5rem 0; padding-left:1.5rem; }
+        .article-content li { margin-bottom:0.75rem; line-height:1.7; color:var(--text-secondary); }
+        .back-link { display:inline-block; margin-top:4rem; color:var(--text-secondary); text-decoration:none; font-size:0.9rem; transition:color 0.2s; }
+        .back-link:hover { color:var(--text-primary); }
+        footer { padding:3rem 0; border-top:1px solid var(--border); text-align:center; }
+        footer p { color:var(--text-tertiary); font-size:0.875rem; }
+        .note { color:var(--text-tertiary); font-style:italic; font-size:0.95rem; margin-bottom:2rem; padding:1rem; background:#fafafa; border-left:3px solid var(--border); }
+        @media (max-width:768px) { article { padding:120px 0 80px; } h1{font-size:2rem;} .article-subtitle{font-size:1.125rem;} }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="/cdn-cgi/l/email-protection#79031c101d57111814181d1c11390f1a11571a18">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Clinical Research · Vancouver General Hospital</div>
+            <h1>Oxford Nanopore Long-Read Sequencing</h1>
+            <p class="article-subtitle">Adaptive sampling for comprehensive genomic profiling in acute myeloid leukemia</p>
+            <p class="note">This work has been published in the Canadian Journal of Pathology as <a href="https://www.flipbookserver.com/CJP-16-3" target="_blank">"Nanopore long-read sequencing and applications in acute myeloid leukemia"</a></p>
+
+            <div class="article-content">
+                <h3>Overview</h3>
+                <p>At Vancouver General Hospital's Cytogenomics Laboratory, I led the implementation and optimization of <strong>Oxford Nanopore Technologies (ONT) long-read sequencing</strong> for comprehensive genomic profiling of acute myeloid leukemia (AML). This work explored the potential of ONT as a rapid, all-in-one diagnostic platform capable of detecting the full spectrum of clinically relevant variants—from large structural rearrangements to single nucleotide changes—while preserving epigenomic information in native DNA molecules.</p>
+
+                <h3>Technical innovation: Adaptive sampling</h3>
+                <p>A key focus of this work was optimizing <strong>adaptive sampling</strong>, a unique ONT capability that enables targeted enrichment without pre-amplification or hybridization-based capture. By sequencing DNA molecules in real-time and selectively retaining reads from user-defined regions of interest while rejecting off-target molecules, adaptive sampling achieved <strong>~70x coverage</strong> in a 32-gene myeloid panel while maintaining <strong>~12x genome-wide coverage</strong> for structural variant detection—all from a single library preparation.</p>
+
+                <p>Through systematic optimization across <strong>8 AML patient samples</strong> on PromethION flow cells, I established critical parameters for maximizing adaptive sampling performance:</p>
+
+                <ul>
+                    <li><strong>Buffer size optimization:</strong> Targeting ≥1% of the genome in cumulative regions of interest minimized pore rejection rates and sustained sequencing throughput.</li>
+                    <li><strong>DNA input concentration:</strong> Maximizing input DNA (>5-10 μg) proved essential for saturating nanopores and maintaining high pore occupancy throughout sequencing runs.</li>
+                    <li><strong>Read length considerations:</strong> Balancing read length with input DNA quantity to optimize throughput while preserving the structural variant detection advantages of long reads.</li>
+                </ul>
+
+                <figure>
+                    <img src="../image/nanopore-1.png" alt="ONT adaptive sampling showing TP53 variant detection" class="article-image">
+                    <figcaption class="figure-caption">Adaptive sampling on a PromethION flow cell achieved ~70x coverage in targeted regions (TP53 locus shown) and ~12x genome-wide coverage, enabling detection of clinically actionable variants without pre-amplification or capture-based enrichment.</figcaption>
+                </figure>
+
+                <h3>Analytical workflow and variant detection</h3>
+                <p>I developed a comprehensive bioinformatic pipeline integrating <strong>Dorado base calling</strong> (HAC model), genome alignment to hg38, and dual variant calling strategies using <strong>Sniffles</strong> for structural variants and <strong>Clair3</strong> for single nucleotide variants. This workflow successfully detected:</p>
+
+                <ul>
+                    <li>Complex structural rearrangements including translocations (e.g., t(6;9) DEK::NUP214), large duplications (PDGFRB::JAKMIP2 from ~2 Mb tandem duplication), and partial tandem duplications (12 kb KMT2A-PTD at 5.9% VAF).</li>
+                    <li>Clinically actionable point mutations in targeted regions with high coverage.</li>
+                    <li>Structural variants in off-target regions through retained genome-wide coverage—demonstrating the platform's capacity to serve multiple diagnostic functions simultaneously.</li>
+                </ul>
+
+                <figure>
+                    <img src="../image/nanopore-2.png" alt="DEK::NUP214 fusion detected by ONT, karyotype, and FISH" class="article-image">
+                    <figcaption class="figure-caption">t(6;9) translocation resulting in DEK::NUP214 fusion detected by conventional karyotype and FISH (left) and confirmed by ONT long-read sequencing in off-target regions (right), demonstrating the platform's ability to simultaneously detect structural variants across the genome.</figcaption>
+                </figure>
+
+                <h3>Integration with complementary technologies</h3>
+                <p>This work was conducted alongside the clinical implementation of <strong>Optical Genome Mapping (OGM)</strong>, enabling direct comparison and integration of these complementary long-range genomic technologies. ONT's ability to detect nucleotide-level changes while preserving structural variant information positioned it as a potential single-platform solution, bridging the gap between cytogenetic analysis and next-generation sequencing in AML diagnostics.</p>
+
+                <h3>Clinical implications and challenges</h3>
+                <p>The study demonstrated ONT's potential to transform AML genomic profiling by consolidating multiple testing modalities into a rapid, comprehensive platform. However, challenges identified included:</p>
+
+                <ul>
+                    <li>Lower base calling accuracy (~99.1%) compared to short-read sequencing, particularly impacting detection of low-frequency somatic variants (<10% VAF).</li>
+                    <li>Computational and storage requirements for processing multi-terabyte datasets.</li>
+                    <li>Need for high-quality, high-molecular-weight DNA input (>1 μg), limiting applicability for some sample types.</li>
+                    <li>Uneven coverage inherent to adaptive sampling requiring further refinement for optimal structural variant calling across all genomic regions.</li>
+                </ul>
+
+                <h3>Publications and impact</h3>
+                <ul>
+                    <li>Published as <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Nanopore+long-read+sequencing+and+applications+in+acute+myeloid+leukemia" target="_blank">"Nanopore long-read sequencing and applications in acute myeloid leukemia"</a> in the Canadian Journal of Pathology, providing a comprehensive review of ONT technology for the clinical laboratory community.</li>
+                    <li>Established foundational knowledge and infrastructure for ongoing long-read sequencing initiatives at VGH, including integration with OGM and expansion to additional hematologic malignancies.</li>
+                    <li>Generated a comprehensive dataset (>7 TB raw data) and analytical framework available for continued optimization and method development.</li>
+                </ul>
+
+                <h3>Significance and future directions</h3>
+                <p>This work represents one of the early implementations of ONT long-read sequencing in clinical cancer genomics, demonstrating both its transformative potential and the practical challenges of clinical deployment. The adaptive sampling optimization strategies and bioinformatic pipelines developed provide a foundation for expanding ONT applications across cancer diagnostics. Ongoing evolution of base calling algorithms and decreasing computational costs continue to improve the feasibility of ONT as a comprehensive clinical sequencing platform.</p>
+            </div>
+
+            <a href="../index.html#research" class="back-link">← Back to Research</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+   
