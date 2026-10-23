@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CRISPR Babies, Eight Years On - Zeid Hamadeh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #0a0a0a;
+            --text-secondary: #525252;
+            --text-tertiary: #a3a3a3;
+            --border: #e5e5e5;
+            --bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            padding: 140px 0 100px;
+        }
+
+        .article-meta {
+            font-size: 0.8125rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .article-content em {
+            font-style: italic;
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .article-content a {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 4rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            article {
+                padding: 120px 0 80px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .article-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/css/article.css">
+    <link rel="stylesheet" href="../assets/css/motion.css">
+    <script src="../assets/js/motion.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Zeid Hamadeh</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#writing">Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <article>
+            <div class="article-meta">Genome Editing · Ethics</div>
+            <h1>The CRISPR Babies, Eight Years On</h1>
+            <p class="article-subtitle">What He Jiankui actually did, why it was indefensible, and whether someone will try again</p>
+
+            <div class="article-content">
+                <p>On 28 November 2018, a 34-year-old biophysicist named He Jiankui walked onto a stage at the University of Hong Kong. I was in the audience. I was a graduate student at the time, and I had come for the Second International Summit on Human Genome Editing, which had filled one hall with many of the world's leading genome-editing scientists. Most of us already knew what he was about to say. Three days earlier, <em>MIT Technology Review</em> had found his project in a Chinese clinical trial registry, and the Associated Press had followed with an interview.<sup class="cite"><a href="#ref-1">1</a></sup><sup class="cite"><a href="#ref-2">2</a></sup></p>
+
+                <p>He told us that twin girls had been born a few weeks earlier, from embryos whose DNA he had edited with CRISPR. He said another woman was in the early stages of a pregnancy. Then he sat down for a panel discussion with several other scientists, and the questions started. They came from the people on stage with him and from the floor, and almost none of them were gentle. Who had approved this? Why this gene, in healthy embryos? Why had he told almost no one? Did the parents understand what they had agreed to? Question after question, the room pressed him, and he defended the work anyway.<sup class="cite"><a href="#ref-3">3</a></sup> David Baltimore, who chaired the summit, called it irresponsible. I remember the mood more than any single answer. It felt less like a scientific session than a hearing.</p>
+
+                <p>Thirteen months later, He was sentenced to prison. The twins are eight years old now. A third child, from the second pregnancy, would be about seven. Almost nothing is publicly known about any of them, and that silence is part of the story. But enough has come out since 2018 to answer the questions the room was asking that day: what exactly was done to these children, why it should never have happened, and whether it will happen again.</p>
+
+                <h2>What he did</h2>
+
+                <p>He recruited couples in which the father was HIV-positive and the mother was not, working through a Beijing HIV advocacy group. The consent form described the project as AIDS vaccine development.<sup class="cite"><a href="#ref-2">2</a></sup><sup class="cite"><a href="#ref-4">4</a></sup> The study claimed approval from a hospital ethics committee in Shenzhen. That committee later said it had never met to consider the project, and the signatures on the approval were suspected to have been forged.<sup class="cite"><a href="#ref-4">4</a></sup></p>
+
+                <p>His target was a gene called <em>CCR5</em>. HIV uses the protein it makes as a doorway into immune cells. About one in ten people of northern European ancestry carry a natural version, called Δ32, that is missing 32 letters of DNA, and people with two copies are highly resistant to the most common strains of HIV. His plan was to give embryos the same protection by cutting <em>CCR5</em> with CRISPR at the fertilisation stage.</p>
+
+                <p>In December 2019, a court in Shenzhen sentenced him to three years in prison and fined him three million yuan. Two colleagues received lesser sentences. According to the state news agency Xinhua, the court found that he had fabricated ethics review documents and that the case had produced three gene-edited babies from two pregnancies.<sup class="cite"><a href="#ref-5">5</a></sup> He was convicted of illegal medical practice, because at the time China had no law that specifically covered what he had done.<sup class="cite"><a href="#ref-6">6</a></sup> He was released in 2022.</p>
+
+                <h2>What the edit actually was</h2>
+
+                <p>The popular version of the story is that He gave two girls the natural HIV-resistance mutation. That is not what happened.</p>
+
+                <p>CRISPR cuts DNA at a chosen spot, but when the cell repairs the cut, it often does so sloppily, adding or deleting a few letters at random. He made no attempt to control that repair. Shortly after the summit, Scot Ryder, a molecular biologist at the University of Massachusetts, went through the data He showed on his slides. One twin had one unedited copy of <em>CCR5</em> and one copy missing 15 letters, which removes five amino acids from the protein but leaves the rest intact. The other twin had two different edits, a four-letter deletion and a one-letter insertion, each of which should break the protein. Neither is Δ32. In Ryder's words, they are "never-before-seen variants of unknown significance."<sup class="cite"><a href="#ref-7">7</a></sup></p>
+
+                <p>Worse, both babies appeared to be mosaic, meaning the edits had not reached every cell, and Ryder noted evidence of an off-target change elsewhere in one twin's genome. He also pointed out that He had reversed the babies' names between his slides from before and after the birth, so it isn't even clear which edit belongs to which child.<sup class="cite"><a href="#ref-7">7</a></sup> None of these variants had been tested to see whether they protect cells from HIV.</p>
+
+                <p>When <em>MIT Technology Review</em> obtained He's unpublished manuscript in late 2019, the outside experts it asked to read it came to the same conclusions. The twins did not carry Δ32, and the data hinted at widespread mosaicism.<sup class="cite"><a href="#ref-8">8</a></sup> The children may have partial resistance to HIV, no resistance, or something else entirely. Nobody has published data that would tell us.</p>
+
+                <h2>A cure for a problem nobody had</h2>
+
+                <p>Even if the edits had worked perfectly, there was no medical reason to make them.</p>
+
+                <p>An HIV-positive father does not need gene editing to have an HIV-negative child. Washing the sperm before IVF removes the virus. A 2016 meta-analysis of 40 studies found no HIV transmission in 11,585 cycles of assisted reproduction using washed semen, including 2,863 cycles in which the father's virus was not suppressed by treatment.<sup class="cite"><a href="#ref-9">9</a></sup> He's couples went through IVF anyway. The editing protected the children against nothing that the IVF itself didn't already handle.</p>
+
+                <p>What the edit did was alter a healthy gene in healthy embryos, to guard against an infection the children might never be exposed to, using a change whose effects were unknown. And <em>CCR5</em> is not a spare part. People with two copies of Δ32 are more likely to develop symptoms after West Nile virus infection,<sup class="cite"><a href="#ref-10">10</a></sup> and a study of the 2009 flu pandemic found higher death rates among carriers.<sup class="cite"><a href="#ref-11">11</a></sup> In the other direction, reducing <em>CCR5</em> improved learning and memory in mice,<sup class="cite"><a href="#ref-12">12</a></sup> and stroke patients carrying Δ32 recovered better.<sup class="cite"><a href="#ref-13">13</a></sup></p>
+
+                <p>A 2019 study claiming that people with two copies of Δ32 die younger got wide coverage as proof the twins had been harmed. It was retracted within months, after the authors learned that a genotyping error in the UK Biobank data had undercounted people with two copies.<sup class="cite"><a href="#ref-14">14</a></sup> A corrected reanalysis found no effect on lifespan, though it couldn't rule out a modest one.<sup class="cite"><a href="#ref-15">15</a></sup> The honest answer is that nobody knows what a lifetime without working <em>CCR5</em> does, and the twins don't carry Δ32 anyway.</p>
+
+                <h2>Why not test it on something lethal?</h2>
+
+                <p>Sitting in that hall, a question kept nagging at me. If you wanted proof that embryo editing works, why not choose a mutation that is lethal before birth? Fix it, and a living baby is the proof. Fail, and the pregnancy never goes to term. It sounds like a built-in test.</p>
+
+                <p>It is worth taking seriously, because a version of this logic is standard in animal genetics. If a mutation kills mouse embryos and an edit rescues them, a live pup is clean evidence that the edit worked. But the logic falls apart in humans, for four reasons.</p>
+
+                <p><strong>The failure mode is a lost pregnancy.</strong> In this design, the way you learn the edit failed is that a woman miscarries. That makes pregnancy loss the expected outcome of the experiment. No ethics board could approve a study that uses a woman's pregnancy as the readout, and no woman should be asked to carry one.</p>
+
+                <p><strong>The people who would need it don't need it.</strong> Most mutations that are lethal before birth are recessive, meaning a child has to inherit two broken copies. A parent who is alive can't have two broken copies of an embryonic-lethal gene, by definition. So the only couples at risk are ones where both partners carry one copy. On average a quarter of their embryos are affected, and preimplantation genetic testing already lets them choose an unaffected one. The strongest case for embryo editing is the rare couple where every embryo would be affected, for example when both parents have the same recessive condition. But that only happens with conditions people survive. The lethal test can never be run where editing is actually needed.</p>
+
+                <p><strong>A live baby doesn't prove the edit worked.</strong> This is the scientific heart of it. If an embryo is mosaic, it may survive with enough corrected cells in the tissues that need the gene, and still carry uncorrected cells everywhere else. For a recessive lethal mutation, fixing one copy is enough to survive, so birth can't tell you whether you fixed one copy or both. Above all, survival is blind to collateral damage. When researchers at Columbia cut a single gene in human embryos with CRISPR, about half the breaks went unrepaired, and many embryos lost large pieces of a chromosome arm.<sup class="cite"><a href="#ref-16">16</a></sup> A team at the Francis Crick Institute found unintended changes, including loss of whole stretches of a chromosome, in about 16 percent of edited embryo cells they analysed.<sup class="cite"><a href="#ref-17">17</a></sup> A baby could be born, rescued from the lethal mutation, and carry damage that only shows up years later.</p>
+
+                <p><strong>Better tests exist that don't need a pregnancy.</strong> For HIV resistance, you can edit a person's own immune cells in a dish, challenge them with the virus, and see whether they survive. For safety, you study animals, and edited human embryos that are never transferred. The international commission convened by the US National Academies and the UK Royal Society set out the bar in 2020. Before any edited embryo is used to start a pregnancy, the intended edit should be confirmed in every cell tested, with no off-target changes, and that should be done reliably. They concluded that no current technology meets that bar.<sup class="cite"><a href="#ref-18">18</a></sup></p>
+
+                <p>So the answer to my question is that a birth is the wrong kind of evidence. It tells you an embryo survived. It doesn't tell you what was done to it. The only way to know whether an edit is safe is to look, carefully and in every cell you can, before anyone is asked to carry the pregnancy. He skipped that step entirely, and a lethal test would have skipped it too.</p>
+
+                <h2>Will someone try again?</h2>
+
+                <p>In the years after the summit, the walls went up. China made it a crime to implant a gene-edited embryo, a law that took effect in 2021,<sup class="cite"><a href="#ref-6">6</a></sup> and its 2024 ethics guidelines state that any clinical research involving germline editing is "irresponsible and not allowed."<sup class="cite"><a href="#ref-19">19</a></sup> In the United States, a rider attached to the FDA's budget every year since 2015 bars the agency from even reviewing an application to start a pregnancy with an edited embryo.<sup class="cite"><a href="#ref-20">20</a></sup> When the third summit met in London in 2023, its organisers concluded that heritable genome editing "remains unacceptable at this time."<sup class="cite"><a href="#ref-21">21</a></sup></p>
+
+                <p>That hasn't stopped people from trying to get around the walls. In 2019, a Russian scientist named Denis Rebrikov announced he wanted to edit embryos to prevent inherited deafness, and began editing genes in human eggs for research, though he said he wouldn't transfer any without government approval.<sup class="cite"><a href="#ref-22">22</a></sup> He Jiankui himself has a lab again in Beijing. In 2024 he said he had no plans to make more edited babies,<sup class="cite"><a href="#ref-23">23</a></sup> but he has since described hopes for embryo trials abroad aimed at preventing Alzheimer's disease.<sup class="cite"><a href="#ref-24">24</a></sup></p>
+
+                <p>What is new is money. By late 2025, at least three start-ups had announced plans to work toward edited babies. One, Preventive, said it had raised $30 million from private funders, and its founder said the company would study safety and not rush.<sup class="cite"><a href="#ref-25">25</a></sup> Another, Origin Genomics, launched in New York in 2026 and is testing editing tools on cells from donated embryos, while lobbying Congress to lift the FDA ban.<sup class="cite"><a href="#ref-26">26</a></sup> These companies plan to use newer tools called base and prime editors, which change DNA letters without cutting both strands, and so might avoid the chromosome damage seen in embryo studies. Whether they actually solve the problems of mosaicism and unintended edits in human embryos has not been shown. Fyodor Urnov, one of the field's best-known genome editors, put his doubts plainly: "I just don't think they're being honest with us." Alta Charo, a bioethicist who helped write the 2017 US report on genome editing, has warned of "genome-editing tourism," where couples travel to whichever country has the weakest rules.<sup class="cite"><a href="#ref-26">26</a></sup></p>
+
+                <p>My own guess is that someone will try again. The tools are cheaper and better than they were in 2018, the laws differ from country to country, and there is now investor money chasing the idea. The real question is whether the next attempt clears the bar the commission set, or simply ignores it the way He did.</p>
+
+                <h2>The children</h2>
+
+                <p>I think often about that hall in Hong Kong. The questions were aggressive, and he deserved every one of them. But the people with the most at stake weren't in the room. Three children are growing up somewhere in China carrying edits nobody fully understands, made without any medical reason, by a scientist who never published his data. We don't know if they're healthy. We don't know if they've been told. They didn't consent to being the first, and the least the rest of us can do is make sure they aren't the first of many experiments done the same way.</p>
+            </div>
+
+            <section class="references">
+                <h2>References</h2>
+                <ol>
+                    <li id="ref-1">Regalado A. Exclusive: Chinese scientists are creating CRISPR babies. <em>MIT Technology Review</em>. 25 November 2018. <a href="https://www.technologyreview.com/2018/11/25/138962/exclusive-chinese-scientists-are-creating-crispr-babies/" target="_blank">technologyreview.com</a></li>
+                    <li id="ref-2">Associated Press. Chinese researcher claims first gene-edited babies. 26 November 2018. <a href="https://www.ktvu.com/news/chinese-researcher-claims-first-gene-edited-babies" target="_blank">ktvu.com</a></li>
+                    <li id="ref-3">Saey TH. The researcher who created CRISPR twins defends his work but fails to quell controversy. <em>Science News</em>. 28 November 2018. <a href="https://www.sciencenews.org/article/researcher-defends-creating-crispr-babies-fails-quell-controversy" target="_blank">sciencenews.org</a></li>
+                    <li id="ref-4">Greely HT. CRISPR'd babies: human germline genome editing in the 'He Jiankui affair'. <em>Journal of Law and the Biosciences</em>. 2019;6(1):111–183. <a href="https://doi.org/10.1093/jlb/lsz010" target="_blank">doi:10.1093/jlb/lsz010</a></li>
+                    <li id="ref-5">AFP. Chinese doctor who touted world's first gene-edited babies sentenced to 3 years in prison. <em>CBS News</em>. 30 December 2019. <a href="https://www.cbsnews.com/news/chinese-scientist-he-jiankui-who-touted-crispr-editing-sentenced-three-years-prison-today-2019-12-30/" target="_blank">cbsnews.com</a></li>
+                    <li id="ref-6">Can China's new criminal law deter the next He Jiankui? <em>Sixth Tone</em>. 2021. <a href="https://www.sixthtone.com/news/1006904" target="_blank">sixthtone.com</a></li>
+                    <li id="ref-7">Ryder SP. #CRISPRbabies: notes on a scandal. <em>The CRISPR Journal</em>. 2018;1(6):355–357. <a href="https://doi.org/10.1089/crispr.2018.29039.spr" target="_blank">doi:10.1089/crispr.2018.29039.spr</a></li>
+                    <li id="ref-8">Regalado A. China's CRISPR babies: read exclusive excerpts from the unseen original research. <em>MIT Technology Review</em>. 3 December 2019. <a href="https://www.technologyreview.com/s/614764/chinas-crispr-babies-read-exclusive-excerpts-he-jiankui-paper/" target="_blank">technologyreview.com</a></li>
+                    <li id="ref-9">Zafer M, Horvath H, Mmeje O, et al. Effectiveness of semen washing to prevent human immunodeficiency virus (HIV) transmission and assist pregnancy in HIV-discordant couples: a systematic review and meta-analysis. <em>Fertility and Sterility</em>. 2016;105(3):645–655. <a href="https://doi.org/10.1016/j.fertnstert.2015.11.028" target="_blank">doi:10.1016/j.fertnstert.2015.11.028</a></li>
+                    <li id="ref-10">Glass WG, McDermott DH, Lim JK, et al. CCR5 deficiency increases risk of symptomatic West Nile virus infection. <em>Journal of Experimental Medicine</em>. 2006;203(1):35–40. <a href="https://doi.org/10.1084/jem.20051970" target="_blank">doi:10.1084/jem.20051970</a></li>
+                    <li id="ref-11">Falcon A, Cuevas MT, Rodriguez-Frandsen A, et al. CCR5 deficiency predisposes to fatal outcome in influenza virus infection. <em>Journal of General Virology</em>. 2015;96(8):2074–2078. <a href="https://doi.org/10.1099/vir.0.000165" target="_blank">doi:10.1099/vir.0.000165</a></li>
+                    <li id="ref-12">Zhou M, Greenhill S, Huang S, et al. CCR5 is a suppressor for cortical plasticity and hippocampal learning and memory. <em>eLife</em>. 2016;5:e20985. <a href="https://doi.org/10.7554/eLife.20985" target="_blank">doi:10.7554/eLife.20985</a></li>
+                    <li id="ref-13">Joy MT, Ben Assayag E, Shabashov-Stone D, et al. CCR5 is a therapeutic target for recovery after stroke and traumatic brain injury. <em>Cell</em>. 2019;176(5):1143–1157. <a href="https://doi.org/10.1016/j.cell.2019.01.044" target="_blank">doi:10.1016/j.cell.2019.01.044</a></li>
+                    <li id="ref-14">Wei X, Nielsen R. Retraction note: CCR5-∆32 is deleterious in the homozygous state in humans. <em>Nature Medicine</em>. 2019;25:1796. <a href="https://doi.org/10.1038/s41591-019-0637-6" target="_blank">doi:10.1038/s41591-019-0637-6</a></li>
+                    <li id="ref-15">Maier R, Akbari A, Wei X, Patterson N, Nielsen R, Reich D. No statistical evidence for an effect of CCR5-∆32 on lifespan in the UK Biobank cohort. <em>Nature Medicine</em>. 2020;26(2):178–180. <a href="https://doi.org/10.1038/s41591-019-0710-1" target="_blank">doi:10.1038/s41591-019-0710-1</a></li>
+                    <li id="ref-16">Zuccaro MV, Xu J, Mitchell C, et al. Allele-specific chromosome removal after Cas9 cleavage in human embryos. <em>Cell</em>. 2020;183(6):1650–1664. <a href="https://doi.org/10.1016/j.cell.2020.10.025" target="_blank">doi:10.1016/j.cell.2020.10.025</a></li>
+                    <li id="ref-17">Alanis-Lobato G, Zohren J, McCarthy A, et al. Frequent loss of heterozygosity in CRISPR-Cas9-edited early human embryos. <em>PNAS</em>. 2021;118(22):e2004832117. <a href="https://doi.org/10.1073/pnas.2004832117" target="_blank">doi:10.1073/pnas.2004832117</a></li>
+                    <li id="ref-18">International Commission on the Clinical Use of Human Germline Genome Editing. <em>Heritable Human Genome Editing</em>. Washington, DC: National Academies Press; 2020. <a href="https://doi.org/10.17226/25665" target="_blank">doi:10.17226/25665</a></li>
+                    <li id="ref-19">Xinhua. China publishes ethical guidelines for human genome editing research. 9 July 2024. <a href="https://english.www.gov.cn/news/202407/09/content_WS668d34e4c6d0868f4e8e903e.html" target="_blank">english.www.gov.cn</a></li>
+                    <li id="ref-20">Joseph A. Congress revives ban on altering the DNA of human embryos used for pregnancies. <em>STAT</em>, reprinted in <em>Scientific American</em>. 5 June 2019. <a href="https://www.scientificamerican.com/article/congress-revives-ban-on-altering-the-dna-of-human-embryos-used-for-pregnancies/" target="_blank">scientificamerican.com</a></li>
+                    <li id="ref-21">Organising Committee of the Third International Summit on Human Genome Editing. Statement. The Royal Society. March 2023. <a href="https://royalsociety.org/news/2023/03/statement-third-international-summit-human-genome-editing/" target="_blank">royalsociety.org</a></li>
+                    <li id="ref-22">Cyranoski D. Russian 'CRISPR-baby' scientist has started editing genes in human eggs with goal of altering deaf gene. <em>Nature</em>, reprinted in <em>Scientific American</em>. 18 October 2019. <a href="https://www.scientificamerican.com/article/russian-crispr-baby-scientist-has-started-editing-genes-in-human-eggs-with-the-goal-of-altering-deaf-gene/" target="_blank">scientificamerican.com</a></li>
+                    <li id="ref-23">McCurry J. Scientist who gene-edited babies is back in lab and 'proud' of past work despite jailing. <em>The Guardian</em>. 1 April 2024. <a href="https://geneticsandsociety.org/article/scientist-who-gene-edited-babies-back-lab-and-proud-past-work-despite-jailing" target="_blank">geneticsandsociety.org</a></li>
+                    <li id="ref-24">Rogue scientist who gene-hacked human babies gears up for more human experiments. <em>Futurism</em>, reporting a <em>Wall Street Journal</em> interview. 28 March 2025. <a href="https://futurism.com/neoscope/he-jiankui-future-human-research" target="_blank">futurism.com</a></li>
+                    <li id="ref-25">Regalado A. Here's the latest company planning for gene-edited babies. <em>MIT Technology Review</em>. 31 October 2025. <a href="https://www.technologyreview.com/2025/10/31/1127461/heres-the-latest-company-planning-for-gene-edited-babies/" target="_blank">technologyreview.com</a></li>
+                    <li id="ref-26">Stein R. This startup wants to prove gene editing embryos is safe for making healthy babies. <em>NPR</em>. 29 September 2026. <a href="https://www.kunc.org/npr-news/2026-09-29/this-startup-wants-to-prove-gene-editing-embryos-is-safe-for-making-healthy-babies" target="_blank">npr.org via kunc.org</a></li>
+                </ol>
+            </section>
+
+            <a href="../index.html#writing" class="back-link">← Back to Writing</a>
+        </article>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Zeid Hamadeh</p>
+        </div>
+    </footer>
+</body>
+</html>
