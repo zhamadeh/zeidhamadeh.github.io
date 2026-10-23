@@ -1,0 +1,88 @@
+/* Dark theme — shared by every page.
+   theme.js sets data-theme on <html> before first paint. :root[data-theme]
+   outranks each page's own :root block, so the palette swaps everywhere. */
+
+:root[data-theme="dark"] {
+    --text-primary: #ecebe7;
+    --text-secondary: #a9a7a1;
+    --text-tertiary: #6f6d68;
+    --border: #2b2a27;
+    --bg: #141413;
+    --bg-secondary: #1c1b19;
+    --accent: #ecebe7;
+    color-scheme: dark;
+}
+
+/* Pages hard-code these, so they need their own overrides */
+:root[data-theme="dark"] nav {
+    background: rgba(20, 20, 19, 0.85);
+}
+
+:root[data-theme="dark"] .box,
+:root[data-theme="dark"] .note {
+    background-color: var(--bg-secondary);
+}
+
+:root[data-theme="dark"] .device-phone {
+    box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Soften bright screenshots and figures a touch on a dark page */
+:root[data-theme="dark"] .project-media img,
+:root[data-theme="dark"] .figure img {
+    filter: brightness(0.92);
+}
+
+/* Fade colours only while switching, so page loads stay instant */
+.theme-switching,
+.theme-switching * {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease !important;
+}
+
+/* Nav toggle: an icon that sits with the links */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.theme-toggle:hover {
+    color: var(--text-primary);
+    transform: rotate(-20deg);
+}
+
+.theme-toggle:focus-visible {
+    outline: 1px solid var(--text-primary);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+.theme-toggle svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.nav-links li.theme-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Six nav items on a phone: tighten spacing so they fit in one row */
+@media (max-width: 768px) {
+    .nav-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
