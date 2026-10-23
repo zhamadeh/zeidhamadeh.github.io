@@ -19,8 +19,8 @@
             --text-primary: #0a0a0a;
             --text-secondary: #525252;
             --text-tertiary: #a3a3a3;
-            --border: #e5e5e5;
-            --bg: #ffffff;
+            --border: #e4e0d7;
+            --bg: #f7f5f0;
         }
 
         body {
@@ -35,7 +35,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(247, 245, 240, 0.88);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
@@ -114,7 +114,7 @@
             font-size: 0.95rem;
             margin-bottom: 2rem;
             padding: 1rem;
-            background: #fafafa;
+            background: #efece5;
             border-left: 3px solid var(--border);
         }
 
@@ -157,14 +157,14 @@
         }
 
         .box {
-            border-left: 4px solid #00CBCC;
-            background-color: #E6FFFF;
+            border-left: 1px solid var(--text-primary);
+            background-color: #efece5;
             padding: 1.5rem;
             margin: 2rem 0;
         }
 
         .box strong {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         .back-link {
@@ -226,6 +226,18 @@
             margin-top: 0.25rem;
             font-style: normal;
         }
+
+        /* Stack the logo above the five nav links on small screens */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                gap: 1.25rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="../assets/css/article.css">
     <link rel="stylesheet" href="../assets/css/motion.css">
@@ -239,6 +251,8 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#research">Research</a></li>
                 <li><a href="../index.html#writing">Writing</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="mailto:zeid.hamadeh@ubc.ca">Contact</a></li>
             </ul>
         </div>
     </nav>

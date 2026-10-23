@@ -10,9 +10,9 @@
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --text-primary: #0a0a0a; --text-secondary: #525252; --text-tertiary: #a3a3a3; --border: #e5e5e5; --bg: #ffffff; }
+        :root { --text-primary: #0a0a0a; --text-secondary: #525252; --text-tertiary: #a3a3a3; --border: #e4e0d7; --bg: #f7f5f0; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.65; color: var(--text-primary); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index:1000; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(247, 245, 240, 0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index:1000; }
         .nav-container { max-width:960px; margin:0 auto; padding:1.25rem 2rem; display:flex; justify-content:space-between; align-items:center; }
         .logo { font-weight:500; font-size:1rem; color:var(--text-primary); text-decoration:none; }
         .nav-links { display:flex; gap:2rem; list-style:none; }
@@ -44,8 +44,20 @@
         .back-link:hover { color:var(--text-primary); }
         footer { padding:3rem 0; border-top:1px solid var(--border); text-align:center; }
         footer p { color:var(--text-tertiary); font-size:0.875rem; }
-        .note { color:var(--text-tertiary); font-style:italic; font-size:0.95rem; margin-bottom:2rem; padding:1rem; background:#fafafa; border-left:3px solid var(--border); }
+        .note { color:var(--text-tertiary); font-style:italic; font-size:0.95rem; margin-bottom:2rem; padding:1rem; background:#efece5; border-left:3px solid var(--border); }
         @media (max-width:768px) { article { padding:120px 0 80px; } h1{font-size:2rem;} .article-subtitle{font-size:1.125rem;} }
+
+        /* Stack the logo above the five nav links on small screens */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .nav-links {
+                gap: 1.25rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="../assets/css/motion.css">
     <script src="../assets/js/motion.js" defer></script>
@@ -59,7 +71,7 @@
                 <li><a href="../index.html#research">Research</a></li>
                 <li><a href="../index.html#writing">Writing</a></li>
                 <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="/cdn-cgi/l/email-protection#79031c101d57111814181d1c11390f1a11571a18">Contact</a></li>
+                <li><a href="mailto:zeid.hamadeh@ubc.ca">Contact</a></li>
             </ul>
         </div>
     </nav>
