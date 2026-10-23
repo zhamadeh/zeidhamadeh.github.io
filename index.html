@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="assets/css/motion.css">
+    <script src="assets/js/motion.js" defer></script>
 
     <style>
         * {
@@ -285,6 +287,34 @@
             border-radius: 4px;
         }
 
+        /* Desktop recording with a phone recording overlapping its corner */
+        .device-stack {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+
+        .device-stack .device-desktop {
+            display: block;
+        }
+
+        .device-phone {
+            position: absolute;
+            right: 5%;
+            bottom: -2.5rem;
+            width: 21%;
+            padding: clamp(3px, 0.6vw, 6px);
+            background: #0a0a0a;
+            border-radius: clamp(14px, 3.2vw, 30px);
+            box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .project-media .device-phone video {
+            display: block;
+            border: none;
+            border-radius: clamp(11px, 2.7vw, 25px);
+        }
+
         .media-link {
             display: inline-block;
             color: var(--text-tertiary);
@@ -398,6 +428,12 @@
                 font-size: 1.125rem;
             }
 
+            .device-phone {
+                width: 28%;
+                right: 3%;
+                bottom: -1.75rem;
+            }
+
             .section-subtitle {
                 font-size: 2rem;
             }
@@ -419,12 +455,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" onclick="showPage('home')" class="logo" id="navLogo">Zeid Hamadeh</a>
+            <a href="#home" class="logo" id="navLogo">Zeid Hamadeh</a>
             <ul class="nav-links">
-                <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
-                <li><a href="#" onclick="showPage('research')">Research</a></li>
-                <li><a href="#" onclick="showPage('writing')">Writing</a></li>
-                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#writing">Writing</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="mailto:zeid.hamadeh@ubc.ca">Contact</a></li>
             </ul>
         </div>
@@ -470,7 +506,7 @@
                     </div>
                 </div>
 
-                <a href="#" onclick="showPage('research')" class="view-all">View all research →</a>
+                <a href="#research" class="view-all">View all research →</a>
             </section>
 
             <section class="section">
@@ -485,16 +521,16 @@
                         <p>I was in the room when He Jiankui announced the first gene-edited babies. What he actually did, and whether it will happen again.</p>
                     </div>
                     <div class="preview-item">
-                        <h3><a href="writing/global-genomic-gap.html">Global Genomic Gap</a></h3>
-                        <p>Based on my TEDxUBC 2025 talk on global disparities in genomic research.</p>
+                        <h3><a href="global-genomic-gap/">The Global Genomic Gap</a></h3>
+                        <p>From my TEDxUBC 2025 talk: what precision medicine misses when it learns from a narrow slice of humanity.</p>
                     </div>
                     <div class="preview-item">
-                        <h3><a href="writing/epigenetic-inheritance.html">Epigenetic Inheritance</a></h3>
-                        <p>How environmental factors influence gene expression across generations.</p>
+                        <h3><a href="writing/epigenetic-inheritance.html">What Did the Hunger Winter Pass On?</a></h3>
+                        <p>Can a parent's experience be written into their children's genes?</p>
                     </div>
                 </div>
 
-                <a href="#" onclick="showPage('writing')" class="view-all">View all writing →</a>
+                <a href="#writing" class="view-all">View all writing →</a>
             </section>
 
             <section class="section">
@@ -505,22 +541,22 @@
 
                 <div class="preview-list">
                     <div class="preview-item">
-                        <h3><a href="#" onclick="showPage('projects')">Multiple Choice Interactive Question Bank</a></h3>
-                        <p>Open-access practice platform for medical students with tagged questions and performance tracking.</p>
+                        <h3><a href="#projects">Study Medicine</a></h3>
+                        <p>Open study platform for medical students: a question bank plus ECG, imaging, disease and differential libraries.</p>
                     </div>
 
                     <div class="preview-item">
-                        <h3><a href="#" onclick="showPage('projects')">COVID-19 Trend Tracker</a></h3>
+                        <h3><a href="#projects">COVID-19 Trend Tracker</a></h3>
                         <p>Interactive R Shiny dashboard for visualizing global COVID-19 trends with R₀ estimation and rolling averages.</p>
                     </div>
 
                     <div class="preview-item">
-                        <h3><a href="#" onclick="showPage('projects')">Clinical Decision Making Learning Grid</a></h3>
-                        <p>Interactive clinical reasoning framework for structuring differential diagnosis and likelihood-based reasoning.</p>
+                        <h3><a href="#projects">CDM Grid</a></h3>
+                        <p>Live classroom tool where students build, vote on and defend a differential diagnosis together.</p>
                     </div>
                 </div>
 
-                <a href="#" onclick="showPage('projects')" class="view-all">View all projects →</a>
+                <a href="#projects" class="view-all">View all projects →</a>
             </section>
 
         </div>
@@ -614,37 +650,37 @@
 
                     <div class="item">
                         <div class="item-meta">Genomics · Global Health · TEDxUBC 2025</div>
-                        <h3><a href="writing/global-genomic-gap.html">Global Genomic Gap</a></h3>
-                        <p>Addressing disparities in genomic research and the need for diverse representation in genetic databases.</p>
-                        <p class="additional-info">Based on my TEDxUBC 2025 talk. An exploration of how the lack of diversity in genomic datasets creates health inequities and limits the potential of precision medicine for underrepresented populations worldwide.</p>
+                        <h3><a href="global-genomic-gap/">The Global Genomic Gap</a></h3>
+                        <p>Precision medicine was built on a narrow slice of humanity. What that costs, and who is closing the gap.</p>
+                        <p class="additional-info">Adapted from my TEDxUBC talk. A patient report full of uncertain variants, a disease found only by studying Ethiopian families, and the new references being built from diverse genomes.</p>
                     </div>
 
                     <div class="item">
-                        <div class="item-meta">Epigenetics · Inheritance · 2021</div>
-                        <h3><a href="writing/epigenetic-inheritance.html">Epigenetic Inheritance</a></h3>
-                        <p>Exploring how environmental factors influence gene expression across generations.</p>
-                        <p class="additional-info">A deep dive into transgenerational epigenetic inheritance, examining how environmental exposures can leave lasting molecular marks that affect descendants.</p>
+                        <div class="item-meta">Epigenetics · Inheritance · Updated 2026</div>
+                        <h3><a href="writing/epigenetic-inheritance.html">What Did the Hunger Winter Pass On?</a></h3>
+                        <p>Can a parent's experience be written into their children's genes? The evidence so far.</p>
+                        <p class="additional-info">Children conceived during the 1944–45 Dutch famine carried its mark for sixty years. Whether that mark reaches their grandchildren is a harder question than it looks.</p>
                     </div>
 
                     <div class="item">
-                        <div class="item-meta">Genetics · Heritability · 2020</div>
-                        <h3><a href="writing/hidden-heritability.html">Hidden Heritablity</a></h3>
-                        <p>Unraveling the mystery of missing heritability in complex genetic traits.</p>
-                        <p class="additional-info">Investigating why genome-wide association studies often fail to explain the full heritability of complex traits, and what this means for our understanding of genetics.</p>
+                        <div class="item-meta">Genetics · Heritability · Updated 2026</div>
+                        <h3><a href="writing/hidden-heritability.html">Where Did the Heritability Go?</a></h3>
+                        <p>Height is mostly genetic. For a decade, nobody could find the genes.</p>
+                        <p class="additional-info">How the missing heritability problem was largely solved for height, and the two places it is still hiding: non-European genomes and the parts of the genome we couldn't read.</p>
                     </div>
 
                     <div class="item">
-                        <div class="item-meta">Molecular Biology · 2019</div>
-                        <h3><a href="writing/dna-repair.html">DNA Repair</a></h3>
-                        <p>Understanding the molecular mechanisms that maintain genome integrity.</p>
-                        <p class="additional-info">An overview of DNA repair pathways and their critical role in preventing mutations, aging, and cancer development.</p>
+                        <div class="item-meta">Molecular Biology · DNA Repair · Updated 2026</div>
+                        <h3><a href="writing/dna-repair.html">The Caretakers</a></h3>
+                        <p>How cells keep their DNA intact, why cancer breaks that system, and what one overlooked helicase does.</p>
+                        <p class="additional-info">From BRCA and PARP inhibitors to my PhD work using single-cell Strand-seq to map where the RECQL5 helicase protects the genome.</p>
                     </div>
 
                     <div class="item">
-                        <div class="item-meta">Oncology · 2016</div>
-                        <h3><a href="writing/cancer.html">Cancer</a></h3>
-                        <p>Insights into cancer biology, genomics, and the evolution of malignancies.</p>
-                        <p class="additional-info">A comprehensive look at cancer as an evolutionary process, examining how tumors develop, adapt, and resist treatment through genomic changes.</p>
+                        <div class="item-meta">Oncology · Updated 2026</div>
+                        <h3><a href="writing/cancer.html">The Wrong War</a></h3>
+                        <p>Why the battlefield metaphor for cancer misleads us, and what to use instead.</p>
+                        <p class="additional-info">Cancer is evolution inside a single body. What imatinib, tumour heterogeneity and fifty years of mortality data say about the idea of a single cure.</p>
                     </div>
                 </div>
             </section>
@@ -663,16 +699,22 @@
                 <div class="items-list">
                     <div class="item">
                         <div class="item-meta">Educational Tool · Current</div>
-                        <h3><a href="https://med421-midterm-practice-bank.vercel.app" target="_blank">MCQ Question Bank</a></h3>
-                        <p>Interactive multiple-choice question bank designed for medical education and exam preparation.</p>
-                        <p class="additional-info">A comprehensive web-based platform for creating, organizing, and practicing medical multiple-choice questions. Features include custom question sets, performance tracking, and detailed explanations for each answer. Built to support medical students in their preparation for board examinations and clinical assessments.</p>
-                        
+                        <h3><a href="https://www.studymed.ca" target="_blank">Study Medicine</a></h3>
+                        <p>An open study platform for medical students: a question bank alongside reference libraries for ECGs, imaging, diseases and differentials.</p>
+                        <p class="additional-info">Started as a midterm practice bank for my own class and grew from there. Each question comes with a full explanation and shows how other students answered. The libraries let you move from a question to the ECG pattern, X-ray or disease behind it, and the differentials section lays out the causes of each presenting complaint by organ system, acuity or pain pattern.</p>
+
                         <div class="project-media">
-                            <video controls>
-                                <source src="mcq-bank-compressed.mp4" type="video/mp4">
-                                Your browser does not support the video tag. <a href="mcq-bank-compressed.mp4">Download video</a>
-                            </video>
-                            <span class="media-link">Demo video of the MCQ Question Bank interface · <a href="https://med421-midterm-practice-bank.vercel.app" target="_blank">Launch App →</a></span>
+                            <div class="device-stack">
+                                <video class="demo-video device-desktop" autoplay muted loop playsinline preload="metadata" poster="media/studymed-desktop-poster.jpg" aria-label="Study Medicine on desktop: answering an ECG question and reading the explanation">
+                                    <source src="media/studymed-desktop.mp4" type="video/mp4">
+                                </video>
+                                <div class="device-phone">
+                                    <video class="demo-video" autoplay muted loop playsinline preload="metadata" poster="media/studymed-xray-phone-poster.jpg" aria-label="Study Medicine on iPhone: the chest X-ray quiz">
+                                        <source src="media/studymed-xray-phone.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                            <span class="media-link">A practice question on desktop, and the chest X-ray quiz on iPhone · <a href="https://www.studymed.ca" target="_blank">Open Study Medicine →</a></span>
                         </div>
                     </div>
 
@@ -693,13 +735,15 @@
 
                     <div class="item">
                         <div class="item-meta">Educational Tool · Current</div>
-                        <h3><a href="https://cdm-grid.vercel.app" target="_blank">CDM Grid</a></h3>
-                        <p>Clinical Decision-Making Grid for systematic differential diagnosis in movement disorders.</p>
-                        <p class="additional-info">An interactive diagnostic framework that organizes clinical findings, supporting evidence, and opposing evidence in a structured grid format. This educational tool helps medical students systematically evaluate diagnoses by weighing likelihood scores against supporting and opposing clinical features. Particularly useful for learning about complex cases involving neurological conditions like Parkinson's disease, multiple system atrophy, and stroke.</p>
-                        
+                        <h3><a href="https://cdm-grid.web.app" target="_blank">CDM Grid</a></h3>
+                        <p>A live classroom tool for working through clinical cases together, one step of the diagnosis at a time.</p>
+                        <p class="additional-info">Students join a session from their phones by scanning a QR code. The class takes a history, examines the patient and orders labs, and each student builds a differential on their own before the answers are merged and voted on. The facilitator then reveals the expert ranking and a must-not-miss checklist, so students can see where their reasoning matched and where it went wrong.</p>
+
                         <div class="project-media">
-                            <img src="Screenshot 2025-10-22 at 7.16.00 AM.png" alt="CDM Grid interface showing movement disorders diagnosis">
-                            <span class="media-link">Screenshot of the CDM Grid interface for movement disorders · <a href="https://cdm-grid.vercel.app" target="_blank">Launch App →</a></span>
+                            <video class="demo-video" autoplay muted loop playsinline preload="metadata" poster="media/cdm-grid-demo-poster.jpg" aria-label="Demo of CDM Grid: a class works through an acute kidney injury case from history to final diagnosis">
+                                <source src="media/cdm-grid-demo.mp4" type="video/mp4">
+                            </video>
+                            <span class="media-link">An acute kidney injury case, from history to final diagnosis · <a href="https://cdm-grid.web.app" target="_blank">Open CDM Grid →</a></span>
                         </div>
                     </div>
                 </div>
@@ -741,41 +785,41 @@
 
         window.addEventListener('scroll', handleScroll);
 
-        // Page navigation
-        function showPage(pageName) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
+        // Page navigation, driven by the URL hash so links from article pages
+        // (../index.html#writing) and the back button both work
+        const PAGES = ['home', 'research', 'writing', 'projects'];
 
-            // Show selected page
-            if (pageName === 'home') {
-                document.getElementById('homePage').classList.add('active');
-            } else if (pageName === 'research') {
-                document.getElementById('researchPage').classList.add('active');
-            } else if (pageName === 'writing') {
-                document.getElementById('writingPage').classList.add('active');
-            } else if (pageName === 'projects') {
-                document.getElementById('projectsPage').classList.add('active');
-            }
+        function showPage(pageName, animate) {
+            if (!PAGES.includes(pageName)) pageName = 'home';
+            const next = document.getElementById(pageName + 'Page');
+            const current = document.querySelector('.page.active');
 
             // Update nav active state
             document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
+                link.classList.toggle('active', link.getAttribute('href') === '#' + pageName);
             });
-            if (event && event.target) {
-                event.target.classList.add('active');
+            if (window.Motion) window.Motion.moveIndicator();
+
+            if (current === next) return;
+
+            const swap = () => {
+                if (current) current.classList.remove('active', 'leaving');
+                next.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'instant' });
+                handleScroll();
+            };
+
+            if (animate && current && document.documentElement.classList.contains('motion')) {
+                current.classList.add('leaving');
+                setTimeout(swap, 220);
+            } else {
+                swap();
             }
-
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Trigger scroll handler to show/hide logo
-            setTimeout(handleScroll, 100);
         }
 
-        // Initial check
-        handleScroll();
+        const route = animate => showPage(location.hash.slice(1) || 'home', animate);
+        window.addEventListener('hashchange', () => route(true));
+        route(false);
     </script>
 </body>
 </html>

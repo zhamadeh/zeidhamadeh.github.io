@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden Heritability - Zeid Hamadeh</title>
+    <title>Where Did the Heritability Go? - Zeid Hamadeh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -64,6 +64,9 @@
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
+        .article-meta { font-size: 0.8125rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; font-weight: 500; }
+        .article-subtitle { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; font-weight: 300; }
+        .article-content em { font-style: italic; }
         .article-content p { margin-bottom: 1.5rem; line-height: 1.8; color: var(--text-secondary); }
         .article-content h2 { font-size: 1.75rem; font-weight: 500; margin-top: 3rem; margin-bottom: 1.5rem; color: var(--text-primary); }
         .article-content h3 { font-size: 1.375rem; font-weight: 500; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
@@ -87,6 +90,9 @@
             h1 { font-size: 2rem; }
         }
     </style>
+    <link rel="stylesheet" href="../assets/css/article.css">
+    <link rel="stylesheet" href="../assets/css/motion.css">
+    <script src="../assets/js/motion.js" defer></script>
 </head>
 <body>
     <nav>
@@ -102,72 +108,70 @@
 
     <div class="container">
         <article>
-            <h1>Hidden Heritability</h1>
+            <div class="article-meta">Genetics · Heritability</div>
+            <h1>Where Did the Heritability Go?</h1>
+            <p class="article-subtitle">Height is mostly genetic. For a decade, nobody could find the genes.</p>
+
             <div class="article-content">
-                <p>---</p>
-<p>layout: post</p>
-<p>title: Where Is All the Hidden Heritability?</p>
-<p>subtitle: Unlocking the missing pieces of the genetic puzzle</p>
-<p>gh-repo: zhamadeh/zhamadeh.github.io</p>
-<p>gh-badge: [star, fork, follow]</p>
-<p>tags: [heritability, genetics, sequencing, hidden variation, Moore's law]</p>
-<p>thumbnail-img: /assets/img/hert.jpeg</p>
-<p>comments: true</p>
-<p>---</p>
+                <p>For years I told people my brother was adopted. He was taller than the rest of us and his eyes were a different colour. It was a joke, but it rested on an instinct everyone shares: children should look like their parents.</p>
 
-<p>When I was a kid, I’d joke that my brother must have been adopted—his eye color, hair, and height didn’t match mine or our parents’. Even without formal training in genetics, most of us intuitively expect children to resemble their parents. This expectation lies at the heart of <strong>heritability</strong>: the proportion of variation in a trait within a population that can be explained by genetic factors.  </p>
+                <p>Geneticists can put a number on that instinct. Compare identical twins, who share all their DNA, with fraternal twins, who share about half, and you can estimate how much of the variation in a trait tracks with genes. The number is called heritability. For adult height, a study of twin cohorts in eight countries put it between 87 and 93 percent in men and between 68 and 84 percent in women.<sup class="cite"><a href="#ref-1">1</a></sup> Round it to 80 percent and you won't be far off.</p>
 
-<p>We can estimate heritability without knowing the exact genes involved. For example, comparing identical twins shows that height is about <strong>80–90% heritable</strong>. Similarly, schizophrenia has an estimated heritability of ~80%. But here’s the puzzle: if we sequenced the human genome more than 20 years ago, why do we still struggle to pinpoint the specific genetic causes of these highly heritable traits and diseases?</p>
+                <p>Notice what that number does not tell you. It says nothing about which genes are involved, how many there are, or where in the genome they sit. Twin studies measure the shadow, not the object casting it.</p>
 
-<p>---</p>
+                <h2>The object goes missing</h2>
 
-<h3>The search for genetic causes</h3>
+                <p>By the mid-2000s, geneticists thought they could finally see the object. The human genome had been sequenced, and cheap genotyping chips could read hundreds of thousands of common DNA variants in a single person. The plan was simple: collect thousands of people, measure their height, and look for variants that turn up more often in tall people than short ones. This is a genome-wide association study, or GWAS.</p>
 
-<p>To uncover genetic risk factors, researchers run <strong>genome-wide association studies (GWAS)</strong>. These compare DNA sequences from people with a disease to those without it, searching for differences. GWAS have identified thousands of genetic variants—but together they usually explain only a small fraction (often ~5%) of the expected heritability.  </p>
+                <p>In May 2008, three groups published the first large GWAS of height in the same issue of <em>Nature Genetics</em>. Between them they found about 40 regions of the genome linked to height. Added together, those regions explained roughly 5 percent of the differences in height between people.<sup class="cite"><a href="#ref-2">2</a></sup></p>
 
-<p>This discrepancy is called the <strong>“missing heritability problem.”</strong> Where is the rest hiding?</p>
+                <p>Five percent, against a twin estimate of 80. Height was not an outlier, either. The same pattern showed up for diabetes, heart disease and schizophrenia. Later that year a news feature in <em>Nature</em> gave the problem its name: the case of the missing heritability.<sup class="cite"><a href="#ref-3">3</a></sup> A group of leading geneticists followed in 2009 with a list of places the rest might be hiding: rare variants too uncommon for the chips to see, structural changes the chips couldn't read at all, and interactions between genes.<sup class="cite"><a href="#ref-4">4</a></sup></p>
 
-<p>---</p>
+                <p>There was a more unsettling possibility. In 2012, Or Zuk and colleagues at the Broad Institute showed that if genes interact with each other, the twin estimates themselves can be inflated.<sup class="cite"><a href="#ref-5">5</a></sup> Some of the heritability might never have existed. They called it phantom heritability.</p>
 
-<h3>Two key explanations</h3>
+                <h2>Spread too thin to see</h2>
 
-<ol>
-<li>**Complexity of genetic networks**  </li>
-</ol>
-<ul>
-<li>Most traits aren’t caused by one gene but by hundreds—or even thousands.  </li>
-<li>Different combinations of mutations can produce the same outcome.  </li>
-<li>This redundancy makes it statistically challenging to detect rare combinations, because studies would need enormous sample sizes.</li>
-</ul>
+                <p>The first real clue came from Jian Yang, Peter Visscher and colleagues in 2010. Instead of hunting for individual variants that cleared a strict statistical bar, they asked a different question: if you take all 294,831 variants on the chip at once, how much of the variation in height do they capture together? In 3,925 unrelated people, the answer was 45 percent.<sup class="cite"><a href="#ref-6">6</a></sup></p>
 
-<ol>
-<li>**Limits of current sequencing**  </li>
-</ol>
-<ul>
-<li>Even though sequencing has outpaced **Moore’s law** in speed and cost, parts of the genome remain inaccessible.  </li>
-<li>Many important variants involve **structural changes**—large chunks of DNA that are inverted, duplicated, or moved. These are much harder to detect than single-nucleotide changes.</li>
-</ul>
+                <p>That changed the shape of the mystery. Most of the heritability was not missing. It was spread across so many variants, each with such a small effect, that no single one stood out from the noise. Each one might nudge height by a millimetre or two. To see a millimetre, you need a very large crowd.</p>
 
-<p>---</p>
+                <p>The crowd took fourteen years to assemble. In 2022, a consortium led by Loïc Yengo and Joel Hirschhorn published a GWAS of 5.4 million people. They found 12,111 independent variants associated with height, clustered in regions covering about a fifth of the genome. In people of European ancestry those variants explained about 40 percent of the variation in height, which is close to everything common variants can explain.<sup class="cite"><a href="#ref-7">7</a></sup> For common variants and height, the map is essentially finished.</p>
 
-<h3>Why structural variation is so hard to capture</h3>
+                <p>The same year, Pierrick Wainschtein and colleagues sequenced the whole genomes of 25,465 people rather than reading a chip. Whole-genome sequencing sees rare variants that chips miss. Their estimate of height heritability rose to 68 percent, much closer to what the twins had promised all along.<sup class="cite"><a href="#ref-8">8</a></sup> Much of the remaining gap sat in rare variants, especially ones that change proteins.</p>
 
-<p>Several technical barriers limit our ability to map these large-scale rearrangements:</p>
+                <h2>What is still missing</h2>
 
-<ol>
-<li>**Reference bias** – Standard sequencing compares reads to a reference genome. Structural changes that don’t match this reference often go undetected.  </li>
-<li>**Repetitive DNA** – Many rearrangements sit within repetitive regions (“sequencing deserts”) that are nearly impossible to map correctly.  </li>
-<li>**Diploidy** – Humans inherit two copies of each chromosome (maternal and paternal). Conventional sequencing often collapses them into one “consensus” sequence, obscuring important differences.</li>
-</ol>
+                <p>So the story of height has a mostly happy ending. Two parts of it do not.</p>
 
-<p>---</p>
+                <p>The first is ancestry. The same 12,111 variants that explain 40 percent of height variation in Europeans explain only about 10 to 20 percent in people of other ancestries.<sup class="cite"><a href="#ref-7">7</a></sup> The biology of height is not different on other continents. The studies are. Most of the people who have been genotyped are of European descent, and the variants that tag causal DNA in one population don't always tag it in another. A genetic prediction that works well in Vancouver can fail in Lagos.</p>
 
-<h3>Why this matters</h3>
+                <p>The second is the parts of the genome we couldn't read. Until 2022, about 8 percent of the human genome was simply absent from the reference sequence everyone compared against. The Telomere-to-Telomere consortium filled it in, adding nearly 200 million bases of sequence that included 1,956 gene predictions.<sup class="cite"><a href="#ref-9">9</a></sup> A year later, the Human Pangenome Reference Consortium released 47 complete, phased genomes from genetically diverse people, adding another 119 million bases that the old reference lacked. Using it doubled the number of structural variants detected per haplotype.<sup class="cite"><a href="#ref-10">10</a></sup></p>
 
-<p>Until we can <strong>fully capture all forms of genetic variation</strong>, much of heritability will remain unexplained. Advances in sequencing technology—especially those that can resolve structural variants and distinguish between maternal and paternal genomes—are key to solving this puzzle.  </p>
+                <p>This is where my own work sits. Structural variants, the large inversions, duplications and rearrangements of DNA, are hard to see with short-read sequencing. They often sit in repetitive stretches where short reads can't be placed, and standard methods blend a person's two copies of each chromosome into one consensus sequence. Long-read sequencing and single-cell methods like Strand-seq can read the two copies separately and follow rearrangements across them. We are only starting to count how much heritability lives there.</p>
 
-<p>Predicting height from DNA would be a fun parlor trick. But more importantly, achieving this level of precision would represent a <strong>true mastery of biology’s language</strong>—with profound implications for medicine, disease prediction, and our understanding of life itself.</p>
+                <p>Disease is also further behind than height. Twin studies estimate the heritability of schizophrenia at about 81 percent.<sup class="cite"><a href="#ref-11">11</a></sup> The largest GWAS, comparing 76,755 people with schizophrenia to 243,649 without, found 287 regions of the genome linked to it.<sup class="cite"><a href="#ref-12">12</a></sup> That is real progress, and it points clearly at genes active in neurons and synapses. But predicting schizophrenia risk from DNA remains far cruder than predicting height.</p>
+
+                <p>My brother is still taller than me. I can't tell you exactly which letters of his genome are responsible. But I can now tell you where most of them are, roughly how many there are, and why it took so long to find them. Fifteen years ago, nobody could.</p>
             </div>
+
+            <section class="references">
+                <h2>References</h2>
+                <ol>
+                    <li id="ref-1">Silventoinen K, Sammalisto S, Perola M, et al. Heritability of adult body height: a comparative study of twin cohorts in eight countries. <em>Twin Research</em>. 2003;6(5):399–408. <a href="https://doi.org/10.1375/136905203770326402" target="_blank">doi:10.1375/136905203770326402</a></li>
+                    <li id="ref-2">Visscher PM. Sizing up human height variation. <em>Nature Genetics</em>. 2008;40(5):489–490. <a href="https://doi.org/10.1038/ng0508-489" target="_blank">doi:10.1038/ng0508-489</a></li>
+                    <li id="ref-3">Maher B. Personal genomes: The case of the missing heritability. <em>Nature</em>. 2008;456(7218):18–21. <a href="https://doi.org/10.1038/456018a" target="_blank">doi:10.1038/456018a</a></li>
+                    <li id="ref-4">Manolio TA, Collins FS, Cox NJ, et al. Finding the missing heritability of complex diseases. <em>Nature</em>. 2009;461(7265):747–753. <a href="https://doi.org/10.1038/nature08494" target="_blank">doi:10.1038/nature08494</a></li>
+                    <li id="ref-5">Zuk O, Hechter E, Sunyaev SR, Lander ES. The mystery of missing heritability: genetic interactions create phantom heritability. <em>PNAS</em>. 2012;109(4):1193–1198. <a href="https://doi.org/10.1073/pnas.1119675109" target="_blank">doi:10.1073/pnas.1119675109</a></li>
+                    <li id="ref-6">Yang J, Benyamin B, McEvoy BP, et al. Common SNPs explain a large proportion of the heritability for human height. <em>Nature Genetics</em>. 2010;42(7):565–569. <a href="https://doi.org/10.1038/ng.608" target="_blank">doi:10.1038/ng.608</a></li>
+                    <li id="ref-7">Yengo L, Vedantam S, Marouli E, et al. A saturated map of common genetic variants associated with human height. <em>Nature</em>. 2022;610(7933):704–712. <a href="https://doi.org/10.1038/s41586-022-05275-y" target="_blank">doi:10.1038/s41586-022-05275-y</a></li>
+                    <li id="ref-8">Wainschtein P, Jain D, Zheng Z, et al. Assessing the contribution of rare variants to complex trait heritability from whole-genome sequence data. <em>Nature Genetics</em>. 2022;54(3):263–273. <a href="https://doi.org/10.1038/s41588-021-00997-7" target="_blank">doi:10.1038/s41588-021-00997-7</a></li>
+                    <li id="ref-9">Nurk S, Koren S, Rhie A, et al. The complete sequence of a human genome. <em>Science</em>. 2022;376(6588):44–53. <a href="https://doi.org/10.1126/science.abj6987" target="_blank">doi:10.1126/science.abj6987</a></li>
+                    <li id="ref-10">Liao WW, Asri M, Ebler J, et al. A draft human pangenome reference. <em>Nature</em>. 2023;617(7960):312–324. <a href="https://doi.org/10.1038/s41586-023-05896-x" target="_blank">doi:10.1038/s41586-023-05896-x</a></li>
+                    <li id="ref-11">Sullivan PF, Kendler KS, Neale MC. Schizophrenia as a complex trait: evidence from a meta-analysis of twin studies. <em>Archives of General Psychiatry</em>. 2003;60(12):1187–1192. <a href="https://doi.org/10.1001/archpsyc.60.12.1187" target="_blank">doi:10.1001/archpsyc.60.12.1187</a></li>
+                    <li id="ref-12">Trubetskoy V, Pardiñas AF, Qi T, et al. Mapping genomic loci implicates genes and synaptic biology in schizophrenia. <em>Nature</em>. 2022;604(7906):502–508. <a href="https://doi.org/10.1038/s41586-022-04434-5" target="_blank">doi:10.1038/s41586-022-04434-5</a></li>
+                </ol>
+            </section>
+
             <a href="../index.html#writing" class="back-link">← Back to Writing</a>
         </article>
     </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNA Repair - Zeid Hamadeh</title>
+    <title>The Caretakers - Zeid Hamadeh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -141,6 +141,10 @@
             color: var(--text-secondary);
         }
 
+        .article-content em {
+            font-style: italic;
+        }
+
         .article-content strong {
             color: var(--text-primary);
             font-weight: 600;
@@ -184,6 +188,9 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="../assets/css/article.css">
+    <link rel="stylesheet" href="../assets/css/motion.css">
+    <script src="../assets/js/motion.js" defer></script>
 </head>
 <body>
     <nav>
@@ -199,35 +206,73 @@
 
     <div class="container">
         <article>
-            <div class="article-meta">Molecular Biology</div>
-            <h1>New Ways of Thinking About Cancer</h1>
-            <p class="article-subtitle">How DNA repair shapes cancer development</p>
+            <div class="article-meta">Molecular Biology · DNA Repair</div>
+            <h1>The Caretakers</h1>
+            <p class="article-subtitle">How cells keep their DNA intact, why cancer breaks that system, and what one overlooked helicase does</p>
 
             <div class="article-content">
-                <p>Cancer is, at its core, a <strong>disease of the genome</strong>. Our DNA is under constant attack—by internal stressors like reactive molecules in cells and external sources such as radiation or chemicals. Normally, repair systems step in to fix the damage and preserve genetic integrity. But when repair fails, errors accumulate. If those errors disrupt the genes that control cell growth, cells can begin dividing uncontrollably.</p>
+                <p>Every time one of your cells divides, it has to copy its entire genome, roughly six billion letters, and hand an exact duplicate to each daughter cell. It does this while its DNA is under constant attack, from reactive molecules made by its own metabolism and from radiation and chemicals outside.<sup class="cite"><a href="#ref-1">1</a></sup> Strands break. Letters get damaged. Replication forks stall when they run into knots and tangles in the DNA ahead of them.</p>
 
-                <p>This <strong>genomic instability</strong>—the build-up of mutations and structural changes in DNA—is one of the defining hallmarks of cancer. Almost all cancers show some form of instability, but the <strong>amount and type</strong> differ widely across tumor types. And the sources are diverse: errors can arise during <strong>replication, transcription, repair, or recombination</strong>.</p>
+                <p>Most of the time, none of this matters, because cells carry an extraordinary set of repair systems. They detect damage, pause the cell cycle, and fix the problem before it can be copied into the next generation of cells. When those systems fail, errors pile up. If the errors land in genes that control growth, a cell can start to divide when it shouldn't.</p>
 
-                <p>Over the last two decades, researchers have increasingly recognized that cancer cells don't just suffer from DNA repair defects—they actively exploit them. By suppressing repair mechanisms, tumors both <strong>initiate disease</strong> and <strong>sustain uncontrolled growth</strong>.</p>
+                <p>That accumulation of damage, called genomic instability, is a feature of most cancers.<sup class="cite"><a href="#ref-2">2</a></sup><sup class="cite"><a href="#ref-3">3</a></sup> It is also what I spent my PhD studying.</p>
 
-                <h2>My research: DNA helicases and repair</h2>
+                <h2>Where the instability comes from</h2>
 
-                <p>My work focuses on <strong>DNA helicases</strong>, enzymes that unwind DNA and help prevent mutations. Within this group, the <strong>RecQ helicases</strong> stand out: they are linked to rare accelerated aging syndromes that also carry a high risk of cancer.</p>
+                <p>The obvious explanation is that cancers start with broken repair genes. For some, that's exactly right. People who inherit a faulty copy of <em>BRCA1</em>, <em>BRCA2</em> or one of the mismatch repair genes have a much higher lifetime risk of cancer, and their tumours show the scars of the missing repair pathway.</p>
 
-                <p>One member of this family, <strong>RECQL5</strong>, has remained relatively unexplored. To investigate its role, I turned to <strong>Strand-seq</strong>, a powerful single-cell sequencing technique that tracks DNA replication patterns at unprecedented resolution.</p>
+                <p>But most cancers are not inherited, and here the story is less tidy. When researchers sequenced large numbers of sporadic tumours, they found that mutations in DNA repair genes were actually uncommon before treatment. The instability seemed to come from somewhere else: oncogenes driving cells to divide so hard and fast that their replication machinery stalls and breaks, a process called replication stress.<sup class="cite"><a href="#ref-3">3</a></sup></p>
 
-                <p>Using both new <strong>wet-lab protocols</strong> and <strong>bioinformatic tools</strong>, I mapped fragile genomic regions prone to replication stress. What I found was striking: <strong>specific "troublesome" DNA regions require RecQ helicases for faithful replication</strong>. Without them, cells are more likely to accumulate errors—errors that may fuel cancer.</p>
+                <p>Instability is a double-edged trait for a tumour. It makes cancer cells less fit, because many of them accumulate damage they can't survive. But it also lets the population evolve faster under pressure, including the pressure of treatment.<sup class="cite"><a href="#ref-4">4</a></sup></p>
 
-                <h2>Why this matters</h2>
+                <h2>A weakness you can aim at</h2>
 
-                <p>Studying DNA repair at single-cell resolution opens a new window into cancer biology. It highlights not only where the genome is most vulnerable, but also how specific repair pathways protect against instability. By understanding these weak spots, we move closer to:</p>
+                <p>That double edge has given us one of the cleverest drug strategies in oncology. In 2005, two groups in the UK showed that cells missing working <em>BRCA1</em> or <em>BRCA2</em> are exquisitely sensitive to drugs that block a second repair enzyme, PARP.<sup class="cite"><a href="#ref-5">5</a></sup><sup class="cite"><a href="#ref-6">6</a></sup> A normal cell can lose PARP and fall back on BRCA-dependent repair. A BRCA-deficient tumour cell has no fallback, and dies.</p>
 
-                <ul>
-                    <li>Explaining how different cancers arise</li>
-                    <li>Designing therapies that exploit tumor-specific repair defects</li>
-                    <li>Developing strategies to preserve genome integrity in healthy cells</li>
-                </ul>
+                <p>Geneticists call this synthetic lethality: two defects that are each survivable but fatal together. PARP inhibitors became the first approved drugs designed around the idea, and they are now part of standard treatment for several cancers in patients with BRCA mutations.<sup class="cite"><a href="#ref-7">7</a></sup> The tumour's repair defect, the thing that helped it arise, became the thing that kills it.</p>
+
+                <h2>The RecQ helicases</h2>
+
+                <p>Repair depends on more than enzymes that cut and paste DNA. It also depends on helicases, motor proteins that travel along DNA and pull its two strands apart. Helicases untangle structures that would otherwise block replication, and they take apart repair intermediates that could cause trouble if left in place.</p>
+
+                <p>One family, the RecQ helicases, has a striking link to human disease. Humans have five of them. Inherited defects in three, called BLM, WRN and RECQL4, cause rare syndromes marked by chromosomal instability, a high risk of cancer, and in some cases features of premature ageing.<sup class="cite"><a href="#ref-8">8</a></sup> The other two, RECQL1 and RECQL5, have not been tied to any human disease.<sup class="cite"><a href="#ref-4">4</a></sup><sup class="cite"><a href="#ref-9">9</a></sup></p>
+
+                <p>RECQL5 interested me because the evidence that it matters was already there. In 2007, a team in Cleveland showed that mice lacking it are prone to cancer, and that their cells have more spontaneous DNA breaks and more recombination than normal. In the test tube, RECQL5 pulls the recombination protein RAD51 off single-stranded DNA, which suggested it acts as a brake on recombination happening where it shouldn't.<sup class="cite"><a href="#ref-9">9</a></sup> What nobody knew was where in the genome that brake was needed.</p>
+
+                <h2>Watching recombination in single cells</h2>
+
+                <p>One of the clearest signs of recombination is the sister chromatid exchange. When a cell copies a chromosome, it makes two identical sister copies. If a replication fork breaks, the cell can repair it by borrowing the matching sequence from the sister, and sometimes the two sisters end up swapping segments. Under a microscope, after special staining, this shows up as a chromosome that changes shade partway along its length.</p>
+
+                <p>For decades that microscope view was the best available, and it could only place an exchange to within millions of bases. Strand-seq, developed in Peter Lansdorp's lab in Vancouver, changed that. It labels newly copied DNA in a single dividing cell so that only the original template strands get sequenced. A sister chromatid exchange then appears as a switch in strand identity partway along a chromosome, and in the original study those switches could be located to within as little as 23 bases.<sup class="cite"><a href="#ref-10">10</a></sup></p>
+
+                <p>My PhD, in the same lab, used Strand-seq to map exchanges in human cells lacking different RecQ helicases. The idea was simple: if you know exactly where exchanges pile up when a particular helicase is missing, you learn what that helicase normally protects.<sup class="cite"><a href="#ref-11">11</a></sup></p>
+
+                <p>Without RECQL5, cells had more sister chromatid exchanges and more DNA double-strand breaks. The extra exchanges weren't scattered at random. They clustered in genes that were being actively transcribed and that were rich in G-quadruplexes, knotted four-stranded structures that guanine-rich DNA can fold into.<sup class="cite"><a href="#ref-12">12</a></sup> These are places where the machinery that reads genes and the machinery that copies them are likely to collide, and where RECQL5 was already thought to help clear the way.<sup class="cite"><a href="#ref-4">4</a></sup> The picture that emerged is of RECQL5 as a caretaker for a particular kind of trouble spot: it stops cells from reaching for risky recombination where transcription and replication get in each other's way.</p>
+
+                <h2>Why the map matters</h2>
+
+                <p>A map of where the genome breaks is more than a curiosity. It shows which regions depend on which caretakers, and so which tumours might be vulnerable when a particular caretaker is lost. That is exactly the logic that turned BRCA deficiency into a target for PARP inhibitors.</p>
+
+                <p>We don't yet know whether RECQL5 loss creates a similar weakness that a drug could exploit. But the cells that taught us about BRCA and PARP were once just a puzzling repair defect in a dish. Every caretaker we understand is one more place a tumour might be made to pay for the shortcuts it took.</p>
             </div>
+
+            <section class="references">
+                <h2>References</h2>
+                <ol>
+                    <li id="ref-1">Jackson SP, Bartek J. The DNA-damage response in human biology and disease. <em>Nature</em>. 2009;461(7267):1071–1078. <a href="https://doi.org/10.1038/nature08467" target="_blank">doi:10.1038/nature08467</a></li>
+                    <li id="ref-2">Hanahan D, Weinberg RA. Hallmarks of cancer: the next generation. <em>Cell</em>. 2011;144(5):646–674. <a href="https://doi.org/10.1016/j.cell.2011.02.013" target="_blank">doi:10.1016/j.cell.2011.02.013</a></li>
+                    <li id="ref-3">Negrini S, Gorgoulis VG, Halazonetis TD. Genomic instability: an evolving hallmark of cancer. <em>Nature Reviews Molecular Cell Biology</em>. 2010;11(3):220–228. <a href="https://doi.org/10.1038/nrm2858" target="_blank">doi:10.1038/nrm2858</a></li>
+                    <li id="ref-4">Hamadeh Z, Lansdorp P. RECQL5 at the intersection of replication and transcription. <em>Frontiers in Cell and Developmental Biology</em>. 2020;8:324. <a href="https://doi.org/10.3389/fcell.2020.00324" target="_blank">doi:10.3389/fcell.2020.00324</a></li>
+                    <li id="ref-5">Farmer H, McCabe N, Lord CJ, et al. Targeting the DNA repair defect in BRCA mutant cells as a therapeutic strategy. <em>Nature</em>. 2005;434(7035):917–921. <a href="https://doi.org/10.1038/nature03445" target="_blank">doi:10.1038/nature03445</a></li>
+                    <li id="ref-6">Bryant HE, Schultz N, Thomas HD, et al. Specific killing of BRCA2-deficient tumours with inhibitors of poly(ADP-ribose) polymerase. <em>Nature</em>. 2005;434(7035):913–917. <a href="https://doi.org/10.1038/nature03443" target="_blank">doi:10.1038/nature03443</a></li>
+                    <li id="ref-7">Lord CJ, Ashworth A. PARP inhibitors: synthetic lethality in the clinic. <em>Science</em>. 2017;355(6330):1152–1158. <a href="https://doi.org/10.1126/science.aam7344" target="_blank">doi:10.1126/science.aam7344</a></li>
+                    <li id="ref-8">Chu WK, Hickson ID. RecQ helicases: multifunctional genome caretakers. <em>Nature Reviews Cancer</em>. 2009;9(9):644–654. <a href="https://doi.org/10.1038/nrc2682" target="_blank">doi:10.1038/nrc2682</a></li>
+                    <li id="ref-9">Hu Y, Raynard S, Sehorn MG, et al. RECQL5/Recql5 helicase regulates homologous recombination and suppresses tumor formation via disruption of Rad51 presynaptic filaments. <em>Genes &amp; Development</em>. 2007;21(23):3073–3084. <a href="https://doi.org/10.1101/gad.1609107" target="_blank">doi:10.1101/gad.1609107</a></li>
+                    <li id="ref-10">Falconer E, Hills M, Naumann U, et al. DNA template strand sequencing of single-cells maps genomic rearrangements at high resolution. <em>Nature Methods</em>. 2012;9(11):1107–1112. <a href="https://doi.org/10.1038/nmeth.2206" target="_blank">doi:10.1038/nmeth.2206</a></li>
+                    <li id="ref-11">Hamadeh Z, Hanlon V, Lansdorp PM. Mapping of sister chromatid exchange events and genome alterations in single cells. <em>Methods</em>. 2022;204:64–72. <a href="https://doi.org/10.1016/j.ymeth.2022.04.013" target="_blank">doi:10.1016/j.ymeth.2022.04.013</a></li>
+                    <li id="ref-12">Hamadeh Z. The role of RECQL5 helicase in suppressing genome instability [PhD thesis]. University of British Columbia; 2024. <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0421419" target="_blank">open.library.ubc.ca</a></li>
+                </ol>
+            </section>
 
             <a href="../index.html#writing" class="back-link">← Back to Writing</a>
         </article>

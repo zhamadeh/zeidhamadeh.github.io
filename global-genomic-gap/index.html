@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Genomic Gap - Zeid Hamadeh</title>
+    <title>The Global Genomic Gap - Zeid Hamadeh</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -227,6 +227,9 @@
             font-style: normal;
         }
     </style>
+    <link rel="stylesheet" href="../assets/css/article.css">
+    <link rel="stylesheet" href="../assets/css/motion.css">
+    <script src="../assets/js/motion.js" defer></script>
 </head>
 <body>
     <nav>
@@ -243,108 +246,90 @@
     <div class="container">
         <article>
             <div class="article-meta">Genomics · Global Health · TEDxUBC 2025</div>
-            <h1>The Global Genomic Gap: from disparity to diversity</h1>
-            <p class="article-subtitle">Why representation in genomics matters for everyone</p>
+            <h1>The Global Genomic Gap</h1>
+            <p class="article-subtitle">Precision medicine was built on a narrow slice of humanity. Here is what that costs, and how it is changing.</p>
 
             <div class="article-content">
-                <p class="note">This post was adapted from my TEDxUBC talk in May 2025. I'll post the video link here once it's available.</p>
+                <p><em>Adapted from my TEDxUBC talk, May 2025.</em></p>
 
-                <p>We're standing at the edge of a medical revolution.</p>
+                <p>Before medical school, I worked as a genome analyst at Vancouver General Hospital. My job was to read the DNA of cancer patients and decide which mutations mattered: which ones explained the cancer, and which ones might point to a treatment.</p>
 
-                <p>Twenty years ago, the Human Genome Project promised us a future where treatments aren't one-size-fits-all, but tailor-made—based on your DNA, your lifestyle, even the microbes in your gut. A future where we can predict who's at risk for disease or how your body might respond to a drug before you even take it.</p>
+                <p>One day a sample came in from a woman of East African descent. We ran every test we had and found her mutations. Then we tried to interpret them, and the databases we relied on had almost nothing to say. They had been built mostly from people of European ancestry, and her variants were rare or absent in them.</p>
 
-                <p>And in many ways, that future is here. Gene sequencing is faster and cheaper than ever. Entire genomes can now be scanned in hours, and for the first time in history, researchers have fully sequenced the entire human genome—thanks to the Telomere-to-Telomere consortium led in part by Dr. Karen Miga, whom I had the privilege of meeting.</p>
+                <p>The report went back to her oncologist with those mutations labelled "variants of uncertain significance." That label didn't mean they were unimportant. It meant nobody had collected enough data from people like her to know.</p>
 
-                <p>Personalized medicine is no longer a dream. It's already reshaping how we diagnose, treat, and prevent disease.</p>
+                <p>I have thought about that report a lot since. Nothing went wrong in the lab. The sequencing worked. What failed was the reference library behind it.</p>
 
-                <p>But here's the catch: this future doesn't apply equally to everyone.</p>
+                <h2>A map drawn from one continent</h2>
 
-                <h2>The genomic gap</h2>
-
-                <p>Over 90% of sequenced genomes come from people of European descent, even though they make up just 16% of the world's population. That means 84% of the world is underrepresented in the very science that is supposed to serve everyone.</p>
-
-                <p>It's like trying to build GPS maps of the world using only roads from Europe, then expecting them to guide you in Lagos, Lima, or Mumbai. The coordinates don't line up, the landmarks are missing, and the directions can send you entirely the wrong way.</p>
-
-                <p>This is what we call the global genomic gap—and it's one of the biggest blind spots in modern medicine.</p>
+                <p>Most of what we know about how genetic variants affect disease comes from genome-wide association studies, which compare the DNA of large numbers of people with and without a condition. As of 2021, about 86 percent of the participants in those studies were of European descent, up from 81 percent in 2016. People of African ancestry made up about 1.1 percent and people of South Asian ancestry about 0.8 percent, despite being a large share of the world's population.<sup class="cite"><a href="#ref-1">1</a></sup></p>
 
                 <figure class="figure">
                     <img src="../image/global_genomic_gap.png" alt="Individuals in GWAS by population over time, with present-day population bar" />
-                    <figcaption>Representation in genome-wide association studies (GWAS) by population over time. The stacked area shows individuals included in GWAS; the right bar shows global population proportions.</figcaption>
-                    <p class="reference">Segun Fatumo, Tinashe Chikowore, Ananyo Choudhury, Muhammad Ayub, Alicia R. Martin &amp; Karoline Kuchenbaecker. <a href="https://www.nature.com/articles/s41591-021-01672-4" target="_blank" rel="noopener noreferrer">A roadmap to increase diversity in genomic studies</a>.</p>
+                    <figcaption>Participants in genome-wide association studies by ancestry over time (stacked area), compared with share of the world's population (right bar). From Fatumo et al., 2022.<sup class="cite"><a href="#ref-1">1</a></sup></figcaption>
                 </figure>
 
-                <h2>A personal story</h2>
+                <p>Imagine drawing a world map using only roads surveyed in Europe, then handing it to someone in Lagos or Lima. Some of it would be right. A lot of it would be confidently wrong, and the person holding it would have no way to tell which parts.</p>
 
-                <p>Before I began medical school, I worked as a genome analyst at Vancouver General Hospital. My job was to interpret the DNA of cancer patients: to decide whether mutations mattered, whether they explained the cancer, or whether they could guide treatment.</p>
+                <p>Genetic tools work the same way. A polygenic risk score adds up thousands of small genetic effects to estimate someone's risk of a disease like heart attack or type 2 diabetes. In 2019, Alicia Martin and colleagues showed that the scores available at the time were several times more accurate in people of European ancestry than in anyone else.<sup class="cite"><a href="#ref-2">2</a></sup> Use one of those scores in a clinic and it will work best for the patients who were already best served.</p>
 
-                <p>One day, we received a sample from a woman of East African descent. We ran all the tests. We found all the mutations. But when we tried to interpret them, the databases we rely on came up empty.</p>
+                <h2>What gets found when you look</h2>
 
-                <p>Why? Because those databases were built mostly from European data.</p>
+                <p>The gap is not only about accuracy. It is about which questions get asked at all.</p>
 
-                <p>The report went back to her oncologist with the mutations marked as "variants of unknown significance." Not because they weren't important, but because we simply didn't have the reference data to know what they meant.</p>
+                <p>Podoconiosis is a disabling swelling of the legs that affects people who walk barefoot for years on irritant red-clay soil formed from volcanic rock. It is common in parts of highland Ethiopia. Only some exposed people develop it, and it clusters in families, with an estimated heritability of 63 percent. In 2012, a team led by the Ethiopian geneticist Fasil Tekola Ayele ran a genome-wide study of podoconiosis in Ethiopian families and found that variants in the HLA class II region, which shapes how the immune system presents antigens, raise the risk. That finding suggested the disease may be driven by an inflammatory immune response to the soil.<sup class="cite"><a href="#ref-3">3</a></sup> Nobody would have found that by studying people in Europe, because people in Europe don't get podoconiosis.</p>
 
-                <p>That patient became another casualty of the genomic gap—not because of the science itself, but because of who the science was built for.</p>
+                <p>The same thing happened in kidney disease. Variants in a gene called <em>APOL1</em> were already known to raise the risk of kidney failure in Black Americans, and the standard view was that you needed two copies to be at risk. In 2025, the H3Africa Kidney Disease Research Network reported on 8,355 people in Ghana and Nigeria. Nearly 30 percent carried two risk copies. But people with just one copy also had higher odds of chronic kidney disease, by about 18 percent.<sup class="cite"><a href="#ref-4">4</a></sup> Studying the population where these variants are most common changed what we thought we knew about them.</p>
 
-                <h2>Why it matters</h2>
+                <h2>Race is the wrong label</h2>
 
-                <p>The consequences ripple far beyond cancer:</p>
+                <p>It is tempting to think the fix is simply to sequence more people in each racial group. But race is a poor guide to genetics.</p>
 
-                <ul>
-                    <li><strong>Heart disease risk:</strong> Polygenic risk scores—tools used to predict who's at risk for complex diseases—work well in Europeans. But in South Asians, who actually have some of the highest rates of premature heart disease, they can be up to four times less accurate. A man given a "low risk" score may still be at high risk—and the first sign something's wrong could be a cardiac arrest.</li>
-                    <li><strong>Neglected diseases:</strong> In rural Ethiopia, children with podoconiosis—a disabling condition triggered by genetic susceptibility to volcanic soil—remain invisible in genomic databases. No known mutations. No guidelines. No path to precision medicine.</li>
-                </ul>
+                <p>In 2002, Noah Rosenberg and colleagues analysed genetic markers in 1,056 people from 52 populations around the world. Differences between individuals within the same population accounted for 93 to 95 percent of human genetic variation. Differences between major continental groups accounted for only 3 to 5 percent.<sup class="cite"><a href="#ref-5">5</a></sup> Genetic ancestry is real and tracks geography, but the boxes we tick on forms, like Black, White or Asian, carve it up badly.</p>
 
-                <p>When groups are excluded from research, they are excluded from its benefits.</p>
-
-                <h2>The deeper issue: race ≠ genetics</h2>
-
-                <p>It might seem like the fix is simple: just sequence more people. But this isn't only a numbers problem. It's also about how we categorize people.</p>
-
-                <p>Too often, genomic research falls back on outdated ideas that genetic diversity can be sorted neatly into racial categories: Black, White, Asian. But these are social constructs, not biological ones.</p>
-
-                <p>Most human genetic diversity exists within these categories, not between them. In fact, the greatest genetic diversity in the world is found in African populations, because all non-African groups descend from a relatively small subset of ancestors.</p>
-
-                <p>So when we use race as a stand-in for ancestry, we risk reinforcing the very inequities we're trying to fix.</p>
+                <p>Africa is the clearest example. Humans have lived there longest, and the people who left to populate the rest of the world carried only part of that diversity with them. As a result, African populations hold more genetic diversity than any other.<sup class="cite"><a href="#ref-1">1</a></sup><sup class="cite"><a href="#ref-6">6</a></sup> Treating "African" as one category throws away exactly the variation that makes those genomes so informative.</p>
 
                 <div class="box">
-                    <strong>Box 1: Key definitions of identity</strong><br><br>
-                    <p><strong>Ancestry:</strong> the genetic origin or lineage of a person, reflecting where their biological ancestors come from.</p>
-                    <p><strong>Race:</strong> a socially constructed category based on perceived physical traits (such as skin color). Race has no precise biological basis, but has real social and historical consequences.</p>
-                    <p><strong>Ethnicity:</strong> a shared cultural identity that may include common ancestry, language, traditions, or history within a group of people.</p>
-                    <p><strong>Nationality:</strong> a legal or political identity describing a person's citizenship or formal belonging to a nation-state.</p>
+                    <strong>Four words that get confused</strong><br><br>
+                    <p><strong>Ancestry:</strong> where a person's biological ancestors came from, which can be estimated from their DNA.</p>
+                    <p><strong>Race:</strong> a social category based on perceived physical traits such as skin colour. It has no precise biological basis but has real social and historical consequences.</p>
+                    <p><strong>Ethnicity:</strong> a shared cultural identity that may include common ancestry, language, traditions or history.</p>
+                    <p><strong>Nationality:</strong> a legal identity, describing citizenship of a country.</p>
                 </div>
 
-                <h2>Signs of progress</h2>
+                <h2>A new reference</h2>
 
-                <p>Thankfully, there are efforts underway to close this gap:</p>
+                <p>There is a deeper problem underneath the databases. Every human genome sequenced today is compared against a reference genome, and for two decades that reference was a patchwork stitched together from a small number of anonymous donors.<sup class="cite"><a href="#ref-7">7</a></sup> Wherever someone's DNA differed substantially from that patchwork, the analysis tools struggled.</p>
 
-                <ul>
-                    <li><strong>H3Africa</strong> is supporting African scientists to lead large-scale genomics studies on diseases that matter to their populations, already uncovering new genetic risk factors for kidney disease.</li>
-                    <li>In South Asia, the PARKH project is building one of the largest psychiatric genetics cohorts in the region.</li>
-                    <li>In Canada, the <strong>Silent Genomes Project</strong> has partnered with Indigenous communities to create a First Nations–governed reference genome database under principles of Indigenous Data Sovereignty: nothing about us without us.</li>
-                    <li>The <strong>All of Us Research Program</strong> in the U.S. is enrolling over a million participants, half from historically underrepresented groups, to build a richly representative dataset for equitable precision medicine.</li>
-                </ul>
+                <p>That has started to change. In 2022 the Telomere-to-Telomere consortium, co-led by Karen Miga, whom I was lucky enough to meet, published the first gapless sequence of a human genome, filling the roughly 8 percent the old reference was missing.<sup class="cite"><a href="#ref-8">8</a></sup> In 2023, the Human Pangenome Reference Consortium released a draft pangenome built from 47 complete genomes from genetically diverse people. Instead of one linear sequence, it stores many versions of each region side by side. Analysing short-read data against it cut small-variant errors by 34 percent and roughly doubled the number of structural variants found in each genome.<sup class="cite"><a href="#ref-9">9</a></sup></p>
 
-                <p>These projects are proving that when science is inclusive, it doesn't just fill gaps—it makes new discoveries that benefit everyone.</p>
+                <h2>Who is closing the gap</h2>
 
-                <h2>A new foundation: the human pangenome</h2>
+                <p>The most encouraging work is being led by the communities that were left out.</p>
 
-                <p>Even the "human genome" itself—the reference used for decades—was based on a single individual. But genomes are not identical; variation is the rule.</p>
+                <p>H3Africa funded African scientists to run large genomic studies on diseases that matter in their own countries, including the kidney study above. In Pakistan, the PARKH study aims to recruit 30,000 people with psychiatric conditions and 15,000 controls.<sup class="cite"><a href="#ref-1">1</a></sup> In Canada, the Silent Genomes Project is building a genetic variant library with Indigenous communities and under Indigenous governance, so that the people whose DNA is studied decide how it is used.<sup class="cite"><a href="#ref-10">10</a></sup> In the United States, the All of Us Research Program set out to enrol at least a million people. By 2019, more than 80 percent of those who had joined came from groups historically underrepresented in biomedical research.<sup class="cite"><a href="#ref-11">11</a></sup></p>
 
-                <p>That's why researchers are building a pangenome: a reference built from hundreds of diverse genomes, represented in a flexible, graph-based structure. Unlike a single linear genome, the pangenome captures the full spectrum of variation across populations.</p>
+                <p>None of this is quick, and none of it works without trust. Communities that have been studied without benefit, or without consent, have good reason to be wary. The projects that succeed share leadership, share data on the community's terms, and share whatever comes out of it.</p>
 
-                <p>A better reference genome means fewer missed diagnoses, fewer uncertain variants, and more accurate answers—for everyone.</p>
-
-                <h2>Closing the gap</h2>
-
-                <p>The global genomic gap is not just a scientific oversight—it's a moral one. If personalized medicine is to live up to its promise, it must be personalized for all of us, not just some of us.</p>
-
-                <p>This will require more than technology. It will require partnerships built on trust, shared leadership, and benefit-sharing. It will require moving away from helicopter science and toward community-driven research.</p>
-
-                <p>We have the tools. We have the talent. What we need now is the will.</p>
-
-                <p>The genomic revolution is here. Let's make sure it doesn't leave anyone behind.</p>
+                <p>I think often about the woman whose report came back full of uncertainty. With a bigger, more diverse library, her variants might have been interpretable. Maybe one of them would have pointed to a treatment. Precision medicine can only be as precise as the people it has learned from, and for most of the world we are only now starting to collect the data.</p>
             </div>
+
+            <section class="references">
+                <h2>References</h2>
+                <ol>
+                    <li id="ref-1">Fatumo S, Chikowore T, Choudhury A, Ayub M, Martin AR, Kuchenbaecker K. A roadmap to increase diversity in genomic studies. <em>Nature Medicine</em>. 2022;28(2):243–250. <a href="https://doi.org/10.1038/s41591-021-01672-4" target="_blank">doi:10.1038/s41591-021-01672-4</a></li>
+                    <li id="ref-2">Martin AR, Kanai M, Kamatani Y, Okada Y, Neale BM, Daly MJ. Clinical use of current polygenic risk scores may exacerbate health disparities. <em>Nature Genetics</em>. 2019;51(4):584–591. <a href="https://doi.org/10.1038/s41588-019-0379-x" target="_blank">doi:10.1038/s41588-019-0379-x</a></li>
+                    <li id="ref-3">Tekola Ayele F, Adeyemo A, Finan C, et al. HLA class II locus and susceptibility to podoconiosis. <em>New England Journal of Medicine</em>. 2012;366(13):1200–1208. <a href="https://doi.org/10.1056/NEJMoa1108448" target="_blank">doi:10.1056/NEJMoa1108448</a></li>
+                    <li id="ref-4">Gbadegesin RA, Ulasi I, Ajayi S, et al. APOL1 bi- and monoallelic variants and chronic kidney disease in West Africans. <em>New England Journal of Medicine</em>. 2025;392(3):228–238. <a href="https://doi.org/10.1056/NEJMoa2404211" target="_blank">doi:10.1056/NEJMoa2404211</a></li>
+                    <li id="ref-5">Rosenberg NA, Pritchard JK, Weber JL, et al. Genetic structure of human populations. <em>Science</em>. 2002;298(5602):2381–2385. <a href="https://doi.org/10.1126/science.1078311" target="_blank">doi:10.1126/science.1078311</a></li>
+                    <li id="ref-6">Sirugo G, Williams SM, Tishkoff SA. The missing diversity in human genetic studies. <em>Cell</em>. 2019;177(1):26–31. <a href="https://doi.org/10.1016/j.cell.2019.02.048" target="_blank">doi:10.1016/j.cell.2019.02.048</a></li>
+                    <li id="ref-7">Ballouz S, Dobin A, Gillis JA. Is it time to change the reference genome? <em>Genome Biology</em>. 2019;20(1):159. <a href="https://doi.org/10.1186/s13059-019-1774-4" target="_blank">doi:10.1186/s13059-019-1774-4</a></li>
+                    <li id="ref-8">Nurk S, Koren S, Rhie A, et al. The complete sequence of a human genome. <em>Science</em>. 2022;376(6588):44–53. <a href="https://doi.org/10.1126/science.abj6987" target="_blank">doi:10.1126/science.abj6987</a></li>
+                    <li id="ref-9">Liao WW, Asri M, Ebler J, et al. A draft human pangenome reference. <em>Nature</em>. 2023;617(7960):312–324. <a href="https://doi.org/10.1038/s41586-023-05896-x" target="_blank">doi:10.1038/s41586-023-05896-x</a></li>
+                    <li id="ref-10">Caron NR, Chongo M, Hudson M, et al. Indigenous genomic databases: pragmatic considerations and cultural contexts. <em>Frontiers in Public Health</em>. 2020;8:111. <a href="https://doi.org/10.3389/fpubh.2020.00111" target="_blank">doi:10.3389/fpubh.2020.00111</a></li>
+                    <li id="ref-11">All of Us Research Program Investigators. The "All of Us" Research Program. <em>New England Journal of Medicine</em>. 2019;381(7):668–676. <a href="https://doi.org/10.1056/NEJMsr1809937" target="_blank">doi:10.1056/NEJMsr1809937</a></li>
+                </ol>
+            </section>
 
             <a href="../index.html#writing" class="back-link">← Back to Writing</a>
         </article>

@@ -1,0 +1,66 @@
+/* Shared pieces for article pages: inline citations and the reference list */
+
+.article-content sup.cite {
+    font-size: 0.7em;
+    line-height: 0;
+    margin-left: 0.1em;
+}
+
+.article-content sup.cite a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.article-content sup.cite a:hover {
+    color: var(--text-primary);
+}
+
+.article-content blockquote {
+    margin: 2rem 0;
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.references {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.references h2 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-tertiary);
+    margin-bottom: 1.5rem;
+}
+
+.references ol {
+    padding-left: 1.25rem;
+}
+
+.references li {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    scroll-margin-top: 6rem;
+}
+
+.references li:target {
+    color: var(--text-primary);
+}
+
+.references a {
+    color: var(--text-tertiary);
+    word-break: break-word;
+}
+
+.references a:hover {
+    color: var(--text-primary);
+}
